@@ -344,7 +344,7 @@ function doPost(token, message) {
         <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
         
         <guid>https://d1034181036.github.io/p/five-tiny-web-projects/</guid>
-        <description>&lt;blockquote&gt;
+        <description>&lt;img src="https://d1034181036.github.io/article-img.jpg" alt="Featured image of post 5個可以在一週內完成的web作品" /&gt;&lt;blockquote&gt;
 &lt;p&gt;Credit: &lt;a class=&#34;link&#34; href=&#34;https://youtu.be/oluY633rkgI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://youtu.be/oluY633rkgI&lt;/a&gt; - (Kyle - Web Dev Simplified)
 Title: &amp;ldquo;5 Projects You Can Build In A Week That Will Get You Hired&amp;rdquo;&lt;/p&gt;
