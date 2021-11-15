@@ -6,40 +6,7 @@
     <description>Recent content in Posts on KevinChen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 05 Nov 2021 14:44:39 +0800</lastBuildDate><atom:link href="https://d1034181036.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>快速架設VPN伺服器</title>
-      <link>https://d1034181036.github.io/p/build-vpn-server/</link>
-      <pubDate>Fri, 05 Nov 2021 14:44:39 +0800</pubDate>
-      
-      <guid>https://d1034181036.github.io/p/build-vpn-server/</guid>
-      <description>Step1: 租一台Linux虛擬主機 選擇自己喜歡的虛擬主機供應商，租一台虛擬主機。
-我目前是使用AWS的 Lightsail (VPS主機)，每個月只要3.5美元。
-Step2: 安裝 OpenVPN Server 本文使用 Nyr/openvpn-install 進行安裝 sudo su wget https://git.io/vpn -O openvpn-install.sh &amp;amp;&amp;amp; bash openvpn-install.sh 輸入完成後接著它會問題幾個問題：  UDP (建議) / TCP port: (建議更改) DNS server 第一個用戶名稱  範例如下圖： Step3: 下載你的使用者檔案 架設好OpenVPN Server之後，
-目錄下會多一個.ovpn檔，例如：KevinChen.ovpn
-我自己是習慣用FileZilla下載到client端。
-Step4: 安裝 OpenVPN Client 在你想用VPN的電腦上面安裝 OpenVPN Client
-然後把ovpn檔案丟進去，就完成囉～
-在IP查詢網站上面測試看看：
-
-結語 使用這個方法只需要5分鐘就可以搞定，感謝社群的貢獻，
-如果這個方法有幫助到你，歡迎去作者的github幫他按個星星哦～
-我真的很喜歡這些有效又簡單的解決方案。
-實測2021/08/30可行。
-沒有什麼方法是永遠有效的，至少現在還能用就好。</description>
-    </item>
-    
-    <item>
-      <title>Line天氣提醒工具</title>
-      <link>https://d1034181036.github.io/p/line-weather-notify/</link>
-      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://d1034181036.github.io/p/line-weather-notify/</guid>
-      <description>使用工具：
- Google Apps Script OpenWeatherMap  GitHub Repository https://github.com/D1034181036/Google-Apps-Script
-Screen Shot </description>
-    </item>
-    
+    <lastBuildDate>Fri, 29 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://d1034181036.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Line生日提醒工具</title>
       <link>https://d1034181036.github.io/p/line-birthdy-notify/</link>
@@ -53,7 +20,18 @@ Line 生日提醒工具 使用工具  Google Apps Script Google Sheets Line Noti
     </item>
     
     <item>
-      <title>YouTube Video Downloader</title>
+      <title>Line天氣提醒工具 (純記錄)</title>
+      <link>https://d1034181036.github.io/p/line-weather-notify/</link>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://d1034181036.github.io/p/line-weather-notify/</guid>
+      <description>使用工具：
+ Google Apps Script OpenWeatherMap  GitHub Repository https://github.com/D1034181036/Google-Apps-Script
+Screen Shot </description>
+    </item>
+    
+    <item>
+      <title>製作一個YouTube影片下載網站</title>
       <link>https://d1034181036.github.io/p/youtube-video-downloader/</link>
       <pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate>
       
@@ -75,11 +53,33 @@ Online Demo YouTube Video Downloader Screen Shot screen_shot</description>
     </item>
     
     <item>
+      <title>快速架設VPN伺服器</title>
+      <link>https://d1034181036.github.io/p/build-vpn-server/</link>
+      <pubDate>Tue, 31 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://d1034181036.github.io/p/build-vpn-server/</guid>
+      <description>註：我先預設會讀這篇的都會用Linux&amp;hellip; Step1: 租一台Linux虛擬主機 選擇自己喜歡的虛擬主機供應商，租一台虛擬主機。
+我目前是使用AWS的 Lightsail (VPS主機)，每個月只要3.5美元。
+Step2: 安裝 OpenVPN Server 本文使用 Nyr/openvpn-install 進行安裝 sudo su wget https://git.io/vpn -O openvpn-install.sh &amp;amp;&amp;amp; bash openvpn-install.sh 輸入完成後接著它會問題幾個問題：  UDP (建議) / TCP port: (建議更改) DNS server 第一個用戶名稱  範例如下圖： Step3: 下載你的使用者檔案 架設好OpenVPN Server之後，
+目錄下會多一個.ovpn檔，例如：KevinChen.ovpn
+我自己是習慣用FileZilla下載到client端。
+Step4: 安裝 OpenVPN Client 在你想用VPN的電腦上面安裝 OpenVPN Client
+然後把ovpn檔案丟進去，就完成囉～
+在IP查詢網站上面測試看看：
+
+結語 使用這個方法只需要5分鐘就可以搞定，感謝社群的貢獻，
+如果這個方法有幫助到你，歡迎去作者的github幫他按個星星哦～
+我真的很喜歡這些有效又簡單的解決方案。
+實測2021/08/30可行。
+沒有什麼方法是永遠有效的，至少現在還能用就好。</description>
+    </item>
+    
+    <item>
       <title>5個可以在一週內完成的web作品</title>
-      <link>https://d1034181036.github.io/p/five-tiny-web-projects/</link>
+      <link>https://d1034181036.github.io/p/five-tiny-web-side-projects/</link>
       <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://d1034181036.github.io/p/five-tiny-web-projects/</guid>
+      <guid>https://d1034181036.github.io/p/five-tiny-web-side-projects/</guid>
       <description>Credit: https://youtu.be/oluY633rkgI - (Kyle - Web Dev Simplified) Title: &amp;ldquo;5 Projects You Can Build In A Week That Will Get You Hired&amp;rdquo;
  這篇文章的內容主要來自Web Dev Simplified頻道的影片， 我覺得內容很棒很有參考價值，所以來筆記一下，影片連結在上面。
 1. Web application with third party api (前端) 找一個你感興趣的第三方API，像是烹飪、電影或是遊戲等等， 做一個簡單的網站來展示這些資訊與應用。
@@ -95,20 +95,19 @@ Online Demo YouTube Video Downloader Screen Shot screen_shot</description>
       
       <guid>https://d1034181036.github.io/p/letto539-simulation/</guid>
       <description>最近一直被威力彩獨得27億的新聞轟炸，身邊朋友都一直說想要去買樂透。 因此讓我好奇樂透的機率到底有多低？一起來了解一下吧～
-為什麼這篇文章是講今彩539？ 因為今彩539的規則比較簡單。
+為什麼這篇文章是講今彩539？ 因為今彩539的規則比較簡單 XD
 今彩539 - 模擬程式 模擬程式網址：https://d1034181036.github.io/Letto539/
-為什麼用JavaScript做模擬？ 因為我想用網頁demo，這樣就可以讓大家一起玩玩看， 而且我不常使用到JavaScript，因此對我來說是個不錯的練習。
 今彩539 - 規則說明  今彩539是一種樂透型遊戲，您必須從01~39的號碼中任選5個號碼進行投注。 您的五個選號中，如有二個以上（含二個號碼）對中當期開出之五個號碼， 即為中獎，並可依規定兌領獎金。
  reference: https://www.taiwanlottery.com.tw/DailyCash/index.asp
 中獎機率與獎金    相同號碼數 組合數 機率 獎金     5 1 0.00017% $8,000,000   4 170 0.02% $20,000   3 5,610 0.97% $300   2 59,840 10.39% $50   1 231,880 40.27% $0   0 278,256 48.32% $0    程式模擬 本次實驗總共做三次模擬，情況如下：</description>
     </item>
     
     <item>
-      <title>爐石戰記 - 如何爬上傳說第一名？</title>
-      <link>https://d1034181036.github.io/p/hearthstone-rank1/</link>
+      <title>爐石戰記：如何爬上傳說第一名？</title>
+      <link>https://d1034181036.github.io/p/hearthstone-how-to-get-rank1/</link>
       <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://d1034181036.github.io/p/hearthstone-rank1/</guid>
+      <guid>https://d1034181036.github.io/p/hearthstone-how-to-get-rank1/</guid>
       <description>爐石戰記 - 如何爬上傳說第一名？ Hi 我是ImSoHappy， 曾多次登上亞服傳說第一名，在這過程中學到了許多經驗， 因此決定在這裡做個紀錄 :)
 
 前言 眾所皆知，爐石身為一款卡牌遊戲， 除了技術成分以外，也有許多運氣成分， 在這種情況下，我的主要策略有兩點：
@@ -121,19 +120,6 @@ Online Demo YouTube Video Downloader Screen Shot screen_shot</description>
 策略3 - 使用1~2組勝率高的強牌來堆積場次 當你已經在傳說前百了， 這時的策略就是拿出你最有自信、勝率最高的牌， 根據環境調整成適合你的牌組，盡量讓自己的勝率達到60%以上， 接著就是擲硬幣的環節，不斷堆積場次就可以了。
 我會建議將打牌的速度降低， 尤其是留牌的部分，我覺得留牌真的是勝敗的核心關鍵， 並且仔細思考每一手的各種情況，以不失誤為主要原則， 剩下的就只是堆積場次了，輸贏不用看得太重。
 總結：  從模仿開始，組建1~2套勝率高的牌組，練習到勝率60%以上 使用快攻牌組，有效率的爬到傳說前段 (最好是季初) 使用強勢、勝率高的牌組堆積場次到第一名  心得 我認為這種達成目標的方式在生活中的許多情況下都適用：</description>
-    </item>
-    
-    <item>
-      <title>英文課程筆記</title>
-      <link>https://d1034181036.github.io/p/%E8%8B%B1%E6%96%87%E8%AA%B2%E7%A8%8B%E7%AD%86%E8%A8%98/</link>
-      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://d1034181036.github.io/p/%E8%8B%B1%E6%96%87%E8%AA%B2%E7%A8%8B%E7%AD%86%E8%A8%98/</guid>
-      <description>課程名稱就不講了，不太推，純粹記錄一下筆記給自己看。 Part 1: 學外語的心法 一種語言等於一個人  不要怕出錯，要開口講話才可以進步。 每天學一些新的單字或句子就能夠快速進步。 將語言運用在生活與工作中。 使用語言交朋友。 學語言從融入文化開始，要入境隨俗。 認真練習。  開始學習語言的第一步： 運用基本的語言技能，和來自世界各地的外國人交流。
-全世界有70億人口，只有3.6億人是英文母語者(5%)  每個人都是自己國家的大使，要當外國人的朋友。 語言是用來解決問題的。 講得清楚比口音更重要。 在對話中結合幽默感，可以講一些小段子，例如： 台灣跟泰國不一樣，泰國人騎大象，高雄人騎野豬。  學習語言的文法與結構  現在進行式 現在簡單式 過去式 未來式  大量的閱讀  閱讀可以自然的學習新的單字，而死背則非常容易忘記。 閱讀會讓人慢慢理解整個句子的意思。 讓閱讀變成每天固定的習慣。 閱讀時可以大聲的朗讀出來。  Tips: 可以錄音，聽自己的發音正不正確。   建立自己的字典，將新單字與句子記錄在筆記本中。  練習寫作 每天花10~15分鐘寫一些簡單的故事、寫郵件、寫日記。 從簡單的句子開始練習，不要給自己太多的壓力，隨手寫就行。
-Part 2: 十分鐘會面 遇到外國人，不知道第一句話該講什麼？ 只要清楚的說出基本的句子，你就能夠與來自世界各地的人交談。
-Tips: 主動問對方問題
-問路的基本英文  Go straight ahead Turn back / Go back Turn left Go along Cross the street Take the frist road on the left It&amp;rsquo;s on the left The best way is to  開啟一個聊天主題 (small talk)   Weather</description>
     </item>
     
   </channel>

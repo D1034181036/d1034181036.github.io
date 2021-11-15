@@ -1,35 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='最近一直被威力彩獨得27億的新聞轟炸，身邊朋友都一直說想要去買樂透。 因此讓我好奇樂透的機率到底有多低？一起來了解一下吧～
-為什麼這篇文章是講今彩539？ 因為今彩539的規則比較簡單。
-今彩539 - 模擬程式 模擬程式網址：https://d1034181036.github.io/Letto539/
-為什麼用JavaScript做模擬？ 因為我想用網頁demo，這樣就可以讓大家一起玩玩看， 而且我不常使用到JavaScript，因此對我來說是個不錯的練習。
-今彩539 - 規則說明  今彩539是一種樂透型遊戲，您必須從01~39的號碼中任選5個號碼進行投注。 您的五個選號中，如有二個以上（含二個號碼）對中當期開出之五個號碼， 即為中獎，並可依規定兌領獎金。
- reference: https://www.taiwanlottery.com.tw/DailyCash/index.asp
-中獎機率與獎金    相同號碼數 組合數 機率 獎金     5 1 0.00017% $8,000,000   4 170 0.02% $20,000   3 5,610 0.97% $300   2 59,840 10.39% $50   1 231,880 40.27% $0   0 278,256 48.32% $0    程式模擬 本次實驗總共做三次模擬，情況如下：'><title>今彩539的中獎機率有多低？</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='你有玩過今彩539嗎？來用模擬程式過過乾癮吧！'><title>今彩539的中獎機率有多低？</title>
 
 <link rel='canonical' href='https://d1034181036.github.io/p/letto539-simulation/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='今彩539的中獎機率有多低？'>
-<meta property='og:description' content='最近一直被威力彩獨得27億的新聞轟炸，身邊朋友都一直說想要去買樂透。 因此讓我好奇樂透的機率到底有多低？一起來了解一下吧～
-為什麼這篇文章是講今彩539？ 因為今彩539的規則比較簡單。
-今彩539 - 模擬程式 模擬程式網址：https://d1034181036.github.io/Letto539/
-為什麼用JavaScript做模擬？ 因為我想用網頁demo，這樣就可以讓大家一起玩玩看， 而且我不常使用到JavaScript，因此對我來說是個不錯的練習。
-今彩539 - 規則說明  今彩539是一種樂透型遊戲，您必須從01~39的號碼中任選5個號碼進行投注。 您的五個選號中，如有二個以上（含二個號碼）對中當期開出之五個號碼， 即為中獎，並可依規定兌領獎金。
- reference: https://www.taiwanlottery.com.tw/DailyCash/index.asp
-中獎機率與獎金    相同號碼數 組合數 機率 獎金     5 1 0.00017% $8,000,000   4 170 0.02% $20,000   3 5,610 0.97% $300   2 59,840 10.39% $50   1 231,880 40.27% $0   0 278,256 48.32% $0    程式模擬 本次實驗總共做三次模擬，情況如下：'>
+<meta property='og:description' content='你有玩過今彩539嗎？來用模擬程式過過乾癮吧！'>
 <meta property='og:url' content='https://d1034181036.github.io/p/letto539-simulation/'>
 <meta property='og:site_name' content='KevinChen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='web' /><meta property='article:published_time' content='2021-08-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-08-27T00:00:00&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='web' /><meta property='article:published_time' content='2021-08-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-08-27T00:00:00&#43;00:00'/><meta property='og:image' content='https://d1034181036.github.io/p/letto539-simulation/article-img.jpg' />
 <meta name="twitter:title" content="今彩539的中獎機率有多低？">
-<meta name="twitter:description" content="最近一直被威力彩獨得27億的新聞轟炸，身邊朋友都一直說想要去買樂透。 因此讓我好奇樂透的機率到底有多低？一起來了解一下吧～
-為什麼這篇文章是講今彩539？ 因為今彩539的規則比較簡單。
-今彩539 - 模擬程式 模擬程式網址：https://d1034181036.github.io/Letto539/
-為什麼用JavaScript做模擬？ 因為我想用網頁demo，這樣就可以讓大家一起玩玩看， 而且我不常使用到JavaScript，因此對我來說是個不錯的練習。
-今彩539 - 規則說明  今彩539是一種樂透型遊戲，您必須從01~39的號碼中任選5個號碼進行投注。 您的五個選號中，如有二個以上（含二個號碼）對中當期開出之五個號碼， 即為中獎，並可依規定兌領獎金。
- reference: https://www.taiwanlottery.com.tw/DailyCash/index.asp
-中獎機率與獎金    相同號碼數 組合數 機率 獎金     5 1 0.00017% $8,000,000   4 170 0.02% $20,000   3 5,610 0.97% $300   2 59,840 10.39% $50   1 231,880 40.27% $0   0 278,256 48.32% $0    程式模擬 本次實驗總共做三次模擬，情況如下：">
+<meta name="twitter:description" content="你有玩過今彩539嗎？來用模擬程式過過乾癮吧！"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://d1034181036.github.io/p/letto539-simulation/article-img.jpg' />
     </head>
     <body class="
     article-page 
@@ -205,8 +188,20 @@
 
     
 <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/p/letto539-simulation/">
+                <img src="/p/letto539-simulation/article-img_hu958d513eeefe5556a31d065479ecc5ac_14205_800x0_resize_q75_box.jpg"
+                        srcset="/p/letto539-simulation/article-img_hu958d513eeefe5556a31d065479ecc5ac_14205_800x0_resize_q75_box.jpg 800w, /p/letto539-simulation/article-img_hu958d513eeefe5556a31d065479ecc5ac_14205_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="533" 
+                        loading="lazy"
+                        alt="Featured image of post 今彩539的中獎機率有多低？" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
     
@@ -215,6 +210,10 @@
         <a href="/p/letto539-simulation/">今彩539的中獎機率有多低？</a>
     </h2>
 
+    
+    <h3 class="article-subtitle">
+        你有玩過今彩539嗎？來用模擬程式過過乾癮吧！
+    </h3>
     
 
     
@@ -244,13 +243,10 @@
     <p>最近一直被威力彩獨得27億的新聞轟炸，身邊朋友都一直說想要去買樂透。
 因此讓我好奇樂透的機率到底有多低？一起來了解一下吧～</p>
 <h4 id="為什麼這篇文章是講今彩539">為什麼這篇文章是講今彩539？</h4>
-<p>因為今彩539的規則比較簡單。</p>
+<p>因為今彩539的規則比較簡單 XD</p>
 <h2 id="今彩539---模擬程式">今彩539 - 模擬程式</h2>
 <p>模擬程式網址：<a class="link" href="https://d1034181036.github.io/Letto539/"  target="_blank" rel="noopener"
     >https://d1034181036.github.io/Letto539/</a></p>
-<h4 id="為什麼用javascript做模擬">為什麼用JavaScript做模擬？</h4>
-<p>因為我想用網頁demo，這樣就可以讓大家一起玩玩看，
-而且我不常使用到JavaScript，因此對我來說是個不錯的練習。</p>
 <h2 id="今彩539---規則說明">今彩539 - 規則說明</h2>
 <blockquote>
 <p>今彩539是一種樂透型遊戲，您必須從01~39的號碼中任選5個號碼進行投注。

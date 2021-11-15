@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='YouTube影片連結 thumbnail
-想法來源：Tom Scott 非常有意思的影片，強烈推薦。 This Video Has X Views 自己動手做 我在這邊選擇使用 Google Apps Script 來實作，原因有以下三點：
- 授權 YouTube API 的方式非常簡單。 方便連結 Google Sheet 紀錄執行結果。 可以排程定時執行，無須自己花錢架設伺服器。  版本1 - 基本功能版 功能非常的簡單，只需要三行程式碼：  呼叫api取得影片資訊 更改影片資訊的標題欄(改為現在的觀看次數) 呼叫api執行更新  function basic(){ // 影片ID設定 const videoId = &amp;quot;aST49yvU3x0&amp;quot;; // 標題格式設定 const titleFormat = &amp;quot;有 {views} 個人點進來看我把筆放到貓的左手上&amp;quot;; // 取得影片資訊 const videoDetails = YouTube.Videos.list(&amp;quot;snippet, statistics&amp;quot;, { id: videoId })[&#39;items&#39;][0]; // 更新標題資訊 videoDetails[&#39;snippet&#39;][&#39;title&#39;] = titleFormat.replace(&amp;quot;{views}&amp;quot;, videoDetails[&#39;statistics&#39;][&#39;viewCount&#39;].'><title>有 6,987 個人點進來看我把筆放到貓的左手上</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='自動更新YouTube影片標題，讓別人以為你閒到像個神經病～'><title>有 6,987 個人點進來看我把筆放到貓的左手上</title>
 
 <link rel='canonical' href='https://d1034181036.github.io/p/this-video-has-69-views/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='有 6,987 個人點進來看我把筆放到貓的左手上'>
-<meta property='og:description' content='YouTube影片連結 thumbnail
-想法來源：Tom Scott 非常有意思的影片，強烈推薦。 This Video Has X Views 自己動手做 我在這邊選擇使用 Google Apps Script 來實作，原因有以下三點：
- 授權 YouTube API 的方式非常簡單。 方便連結 Google Sheet 紀錄執行結果。 可以排程定時執行，無須自己花錢架設伺服器。  版本1 - 基本功能版 功能非常的簡單，只需要三行程式碼：  呼叫api取得影片資訊 更改影片資訊的標題欄(改為現在的觀看次數) 呼叫api執行更新  function basic(){ // 影片ID設定 const videoId = &amp;quot;aST49yvU3x0&amp;quot;; // 標題格式設定 const titleFormat = &amp;quot;有 {views} 個人點進來看我把筆放到貓的左手上&amp;quot;; // 取得影片資訊 const videoDetails = YouTube.Videos.list(&amp;quot;snippet, statistics&amp;quot;, { id: videoId })[&#39;items&#39;][0]; // 更新標題資訊 videoDetails[&#39;snippet&#39;][&#39;title&#39;] = titleFormat.replace(&amp;quot;{views}&amp;quot;, videoDetails[&#39;statistics&#39;][&#39;viewCount&#39;].'>
+<meta property='og:description' content='自動更新YouTube影片標題，讓別人以為你閒到像個神經病～'>
 <meta property='og:url' content='https://d1034181036.github.io/p/this-video-has-69-views/'>
 <meta property='og:site_name' content='KevinChen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='web' /><meta property='article:published_time' content='2021-09-21T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-09-21T00:00:00&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='web' /><meta property='article:published_time' content='2021-09-21T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-09-21T00:00:00&#43;00:00'/><meta property='og:image' content='https://d1034181036.github.io/p/this-video-has-69-views/article-img.jpg' />
 <meta name="twitter:title" content="有 6,987 個人點進來看我把筆放到貓的左手上">
-<meta name="twitter:description" content="YouTube影片連結 thumbnail
-想法來源：Tom Scott 非常有意思的影片，強烈推薦。 This Video Has X Views 自己動手做 我在這邊選擇使用 Google Apps Script 來實作，原因有以下三點：
- 授權 YouTube API 的方式非常簡單。 方便連結 Google Sheet 紀錄執行結果。 可以排程定時執行，無須自己花錢架設伺服器。  版本1 - 基本功能版 功能非常的簡單，只需要三行程式碼：  呼叫api取得影片資訊 更改影片資訊的標題欄(改為現在的觀看次數) 呼叫api執行更新  function basic(){ // 影片ID設定 const videoId = &amp;quot;aST49yvU3x0&amp;quot;; // 標題格式設定 const titleFormat = &amp;quot;有 {views} 個人點進來看我把筆放到貓的左手上&amp;quot;; // 取得影片資訊 const videoDetails = YouTube.Videos.list(&amp;quot;snippet, statistics&amp;quot;, { id: videoId })[&#39;items&#39;][0]; // 更新標題資訊 videoDetails[&#39;snippet&#39;][&#39;title&#39;] = titleFormat.replace(&amp;quot;{views}&amp;quot;, videoDetails[&#39;statistics&#39;][&#39;viewCount&#39;].">
+<meta name="twitter:description" content="自動更新YouTube影片標題，讓別人以為你閒到像個神經病～"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://d1034181036.github.io/p/this-video-has-69-views/article-img.jpg' />
     </head>
     <body class="
     article-page 
@@ -193,8 +188,20 @@
 
     
 <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/p/this-video-has-69-views/">
+                <img src="/p/this-video-has-69-views/article-img_hu958d513eeefe5556a31d065479ecc5ac_14205_800x0_resize_q75_box.jpg"
+                        srcset="/p/this-video-has-69-views/article-img_hu958d513eeefe5556a31d065479ecc5ac_14205_800x0_resize_q75_box.jpg 800w, /p/this-video-has-69-views/article-img_hu958d513eeefe5556a31d065479ecc5ac_14205_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="533" 
+                        loading="lazy"
+                        alt="Featured image of post 有 6,987 個人點進來看我把筆放到貓的左手上" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
     
@@ -203,6 +210,10 @@
         <a href="/p/this-video-has-69-views/">有 6,987 個人點進來看我把筆放到貓的左手上</a>
     </h2>
 
+    
+    <h3 class="article-subtitle">
+        自動更新YouTube影片標題，讓別人以為你閒到像個神經病～
+    </h3>
     
 
     

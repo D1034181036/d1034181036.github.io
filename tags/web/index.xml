@@ -8,17 +8,6 @@
     <language>zh-tw</language>
     <lastBuildDate>Fri, 29 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://d1034181036.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Line天氣提醒工具</title>
-      <link>https://d1034181036.github.io/p/line-weather-notify/</link>
-      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://d1034181036.github.io/p/line-weather-notify/</guid>
-      <description>使用工具：
- Google Apps Script OpenWeatherMap  GitHub Repository https://github.com/D1034181036/Google-Apps-Script
-Screen Shot </description>
-    </item>
-    
-    <item>
       <title>Line生日提醒工具</title>
       <link>https://d1034181036.github.io/p/line-birthdy-notify/</link>
       <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
@@ -31,7 +20,18 @@ Line 生日提醒工具 使用工具  Google Apps Script Google Sheets Line Noti
     </item>
     
     <item>
-      <title>YouTube Video Downloader</title>
+      <title>Line天氣提醒工具 (純記錄)</title>
+      <link>https://d1034181036.github.io/p/line-weather-notify/</link>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://d1034181036.github.io/p/line-weather-notify/</guid>
+      <description>使用工具：
+ Google Apps Script OpenWeatherMap  GitHub Repository https://github.com/D1034181036/Google-Apps-Script
+Screen Shot </description>
+    </item>
+    
+    <item>
+      <title>製作一個YouTube影片下載網站</title>
       <link>https://d1034181036.github.io/p/youtube-video-downloader/</link>
       <pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate>
       
@@ -54,10 +54,10 @@ Online Demo YouTube Video Downloader Screen Shot screen_shot</description>
     
     <item>
       <title>5個可以在一週內完成的web作品</title>
-      <link>https://d1034181036.github.io/p/five-tiny-web-projects/</link>
+      <link>https://d1034181036.github.io/p/five-tiny-web-side-projects/</link>
       <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://d1034181036.github.io/p/five-tiny-web-projects/</guid>
+      <guid>https://d1034181036.github.io/p/five-tiny-web-side-projects/</guid>
       <description>Credit: https://youtu.be/oluY633rkgI - (Kyle - Web Dev Simplified) Title: &amp;ldquo;5 Projects You Can Build In A Week That Will Get You Hired&amp;rdquo;
  這篇文章的內容主要來自Web Dev Simplified頻道的影片， 我覺得內容很棒很有參考價值，所以來筆記一下，影片連結在上面。
 1. Web application with third party api (前端) 找一個你感興趣的第三方API，像是烹飪、電影或是遊戲等等， 做一個簡單的網站來展示這些資訊與應用。
@@ -73,9 +73,8 @@ Online Demo YouTube Video Downloader Screen Shot screen_shot</description>
       
       <guid>https://d1034181036.github.io/p/letto539-simulation/</guid>
       <description>最近一直被威力彩獨得27億的新聞轟炸，身邊朋友都一直說想要去買樂透。 因此讓我好奇樂透的機率到底有多低？一起來了解一下吧～
-為什麼這篇文章是講今彩539？ 因為今彩539的規則比較簡單。
+為什麼這篇文章是講今彩539？ 因為今彩539的規則比較簡單 XD
 今彩539 - 模擬程式 模擬程式網址：https://d1034181036.github.io/Letto539/
-為什麼用JavaScript做模擬？ 因為我想用網頁demo，這樣就可以讓大家一起玩玩看， 而且我不常使用到JavaScript，因此對我來說是個不錯的練習。
 今彩539 - 規則說明  今彩539是一種樂透型遊戲，您必須從01~39的號碼中任選5個號碼進行投注。 您的五個選號中，如有二個以上（含二個號碼）對中當期開出之五個號碼， 即為中獎，並可依規定兌領獎金。
  reference: https://www.taiwanlottery.com.tw/DailyCash/index.asp
 中獎機率與獎金    相同號碼數 組合數 機率 獎金     5 1 0.00017% $8,000,000   4 170 0.02% $20,000   3 5,610 0.97% $300   2 59,840 10.39% $50   1 231,880 40.27% $0   0 278,256 48.32% $0    程式模擬 本次實驗總共做三次模擬，情況如下：</description>

@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='前言 我有一個大學班級的Line群組， 每當有同學生日時，我們老師就會傳訊息祝他生日快樂， 而且持續到現在整整七年都還保持著這個習慣，真的是太有毅力了！ 我們有時候還會開玩笑懷疑老師有寫機器人來自動發生日快樂訊息XD
-
-現在很多人的Facebook會把生日顯示關掉，因此更有可能錯過這些日子。 所以我們來做個免費、不需架設伺服器的生日提醒系統吧！
-Line 生日提醒工具 使用工具  Google Apps Script Google Sheets Line Notify  運作方式  排程設定每天固定時間執行一次 Script 讀取 Google Sheets 取得生日資料 若當天有事件發生，呼叫 Line Notify 傳送提醒  設定步驟  Line Notify 設定通知群組、取得專用Token Google Sheets 建立Sheets檔案，設定格式請參考這裡 Google Apps Script 建立程式檔案，請參考下方程式碼範例，將sheetId與token填入 設定排程定時執行程式 完成！  程式碼 function main(){ //sheetId可以從網址複製 -&amp;gt;https://docs.google.com/spreadsheets/d/{sheet_id}/ const sheetId = &#39;{sheet_id}&#39;; const token = &#39;{line_notify_token}&#39;; const spreadSheet = SpreadsheetApp.openById(sheetId); const sheet = spreadSheet.getSheets()[0]; const data = sheet.'><title>Line生日提醒工具</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='再也不用擔心忘記家人朋友的生日啦～'><title>Line生日提醒工具</title>
 
 <link rel='canonical' href='https://d1034181036.github.io/p/line-birthdy-notify/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Line生日提醒工具'>
-<meta property='og:description' content='前言 我有一個大學班級的Line群組， 每當有同學生日時，我們老師就會傳訊息祝他生日快樂， 而且持續到現在整整七年都還保持著這個習慣，真的是太有毅力了！ 我們有時候還會開玩笑懷疑老師有寫機器人來自動發生日快樂訊息XD
-
-現在很多人的Facebook會把生日顯示關掉，因此更有可能錯過這些日子。 所以我們來做個免費、不需架設伺服器的生日提醒系統吧！
-Line 生日提醒工具 使用工具  Google Apps Script Google Sheets Line Notify  運作方式  排程設定每天固定時間執行一次 Script 讀取 Google Sheets 取得生日資料 若當天有事件發生，呼叫 Line Notify 傳送提醒  設定步驟  Line Notify 設定通知群組、取得專用Token Google Sheets 建立Sheets檔案，設定格式請參考這裡 Google Apps Script 建立程式檔案，請參考下方程式碼範例，將sheetId與token填入 設定排程定時執行程式 完成！  程式碼 function main(){ //sheetId可以從網址複製 -&amp;gt;https://docs.google.com/spreadsheets/d/{sheet_id}/ const sheetId = &#39;{sheet_id}&#39;; const token = &#39;{line_notify_token}&#39;; const spreadSheet = SpreadsheetApp.openById(sheetId); const sheet = spreadSheet.getSheets()[0]; const data = sheet.'>
+<meta property='og:description' content='再也不用擔心忘記家人朋友的生日啦～'>
 <meta property='og:url' content='https://d1034181036.github.io/p/line-birthdy-notify/'>
 <meta property='og:site_name' content='KevinChen'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='web' /><meta property='article:published_time' content='2021-10-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-10-25T00:00:00&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='web' /><meta property='article:published_time' content='2021-10-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-10-25T00:00:00&#43;00:00'/><meta property='og:image' content='https://d1034181036.github.io/p/line-birthdy-notify/article-img.jpg' />
 <meta name="twitter:title" content="Line生日提醒工具">
-<meta name="twitter:description" content="前言 我有一個大學班級的Line群組， 每當有同學生日時，我們老師就會傳訊息祝他生日快樂， 而且持續到現在整整七年都還保持著這個習慣，真的是太有毅力了！ 我們有時候還會開玩笑懷疑老師有寫機器人來自動發生日快樂訊息XD
-
-現在很多人的Facebook會把生日顯示關掉，因此更有可能錯過這些日子。 所以我們來做個免費、不需架設伺服器的生日提醒系統吧！
-Line 生日提醒工具 使用工具  Google Apps Script Google Sheets Line Notify  運作方式  排程設定每天固定時間執行一次 Script 讀取 Google Sheets 取得生日資料 若當天有事件發生，呼叫 Line Notify 傳送提醒  設定步驟  Line Notify 設定通知群組、取得專用Token Google Sheets 建立Sheets檔案，設定格式請參考這裡 Google Apps Script 建立程式檔案，請參考下方程式碼範例，將sheetId與token填入 設定排程定時執行程式 完成！  程式碼 function main(){ //sheetId可以從網址複製 -&amp;gt;https://docs.google.com/spreadsheets/d/{sheet_id}/ const sheetId = &#39;{sheet_id}&#39;; const token = &#39;{line_notify_token}&#39;; const spreadSheet = SpreadsheetApp.openById(sheetId); const sheet = spreadSheet.getSheets()[0]; const data = sheet.">
+<meta name="twitter:description" content="再也不用擔心忘記家人朋友的生日啦～"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://d1034181036.github.io/p/line-birthdy-notify/article-img.jpg' />
     </head>
     <body class="
     article-page 
@@ -196,16 +188,40 @@ Line 生日提醒工具 使用工具  Google Apps Script Google Sheets Line Noti
 
     
 <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/p/line-birthdy-notify/">
+                <img src="/p/line-birthdy-notify/article-img_hu958d513eeefe5556a31d065479ecc5ac_14205_800x0_resize_q75_box.jpg"
+                        srcset="/p/line-birthdy-notify/article-img_hu958d513eeefe5556a31d065479ecc5ac_14205_800x0_resize_q75_box.jpg 800w, /p/line-birthdy-notify/article-img_hu958d513eeefe5556a31d065479ecc5ac_14205_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="533" 
+                        loading="lazy"
+                        alt="Featured image of post Line生日提醒工具" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%BD%AE%E9%A0%82/" >
+                置頂
+            </a>
+        
+    </header>
     
 
     <h2 class="article-title">
         <a href="/p/line-birthdy-notify/">Line生日提醒工具</a>
     </h2>
 
+    
+    <h3 class="article-subtitle">
+        再也不用擔心忘記家人朋友的生日啦～
+    </h3>
     
 
     
