@@ -30,15 +30,6 @@ Step4: 安裝 OpenVPN Client 在你想用VPN的電腦上面安裝 OpenVPN Client
     </item>
     
     <item>
-      <title>Test</title>
-      <link>https://d1034181036.github.io/p/test/</link>
-      <pubDate>Thu, 04 Nov 2021 20:23:52 +0800</pubDate>
-      
-      <guid>https://d1034181036.github.io/p/test/</guid>
-      <description>安安</description>
-    </item>
-    
-    <item>
       <title>Line天氣提醒工具</title>
       <link>https://d1034181036.github.io/p/line-weather-notify/</link>
       <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
