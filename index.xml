@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>KevinChen</title>
+        <link>https://d1034181036.github.io/</link>
+        <description>Recent content on KevinChen</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <lastBuildDate>Sat, 06 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://d1034181036.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>快速架設VPN伺服器</title>
+        <link>https://d1034181036.github.io/p/build-vpn-server/</link>
+        <pubDate>Fri, 05 Nov 2021 14:44:39 +0800</pubDate>
+        
+        <guid>https://d1034181036.github.io/p/build-vpn-server/</guid>
+        <description>&lt;img src="https://d1034181036.github.io/article-img.jpg" alt="Featured image of post 快速架設VPN伺服器" /&gt;&lt;h3 id=&#34;step1-租一台linux虛擬主機&#34;&gt;Step1: 租一台Linux虛擬主機&lt;/h3&gt;
+&lt;p&gt;選擇自己喜歡的虛擬主機供應商，租一台虛擬主機。&lt;br&gt;
+我目前是使用AWS的 &lt;a class=&#34;link&#34; href=&#34;https://aws.amazon.com/tw/lightsail/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Lightsail&lt;/a&gt; (VPS主機)，每個月只要3.5美元。&lt;/p&gt;
+&lt;h3 id=&#34;step2-安裝-openvpn-server&#34;&gt;Step2: 安裝 OpenVPN Server&lt;/h3&gt;
+&lt;h4 id=&#34;本文使用-nyropenvpn-installhttpsgithubcomnyropenvpn-install-進行安裝&#34;&gt;本文使用 &lt;a class=&#34;link&#34; href=&#34;https://github.com/Nyr/openvpn-install&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nyr/openvpn-install&lt;/a&gt; 進行安裝&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo su
+wget https://git.io/vpn -O openvpn-install.sh &amp;amp;&amp;amp; bash openvpn-install.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;輸入完成後接著它會問題幾個問題&#34;&gt;輸入完成後接著它會問題幾個問題：&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;UDP (建議) / TCP&lt;/li&gt;
+&lt;li&gt;port: (建議更改)&lt;/li&gt;
+&lt;li&gt;DNS server&lt;/li&gt;
+&lt;li&gt;第一個用戶名稱&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;範例如下圖：
+&lt;img src=&#34;https://i.imgur.com/QEQEspC.png&#34; alt=&#34;drawing&#34; width=&#34;400&#34;/&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step3-下載你的使用者檔案&#34;&gt;Step3: 下載你的使用者檔案&lt;/h3&gt;
+&lt;p&gt;架設好OpenVPN Server之後，&lt;br&gt;
+目錄下會多一個.ovpn檔，例如：&lt;code&gt;KevinChen.ovpn&lt;/code&gt;&lt;br&gt;
+我自己是習慣用FileZilla下載到client端。&lt;/p&gt;
+&lt;h3 id=&#34;step4-安裝-openvpn-client&#34;&gt;Step4: 安裝 OpenVPN Client&lt;/h3&gt;
+&lt;p&gt;在你想用VPN的電腦上面安裝 &lt;a class=&#34;link&#34; href=&#34;https://openvpn.net/vpn-client/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenVPN Client&lt;/a&gt;&lt;br&gt;
+然後把ovpn檔案丟進去，就完成囉～&lt;br&gt;
+在IP查詢網站上面測試看看：&lt;br&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/skrSkQ0.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/skrSkQ0.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;結語&#34;&gt;結語&lt;/h3&gt;
+&lt;p&gt;使用這個方法只需要5分鐘就可以搞定，感謝社群的貢獻，&lt;br&gt;
+如果這個方法有幫助到你，歡迎去作者的github幫他按個星星哦～&lt;br&gt;
+我真的很喜歡這些有效又簡單的解決方案。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;實測2021/08/30可行。&lt;/strong&gt;&lt;br&gt;
+沒有什麼方法是永遠有效的，至少現在還能用就好。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Test</title>
+        <link>https://d1034181036.github.io/p/test/</link>
+        <pubDate>Thu, 04 Nov 2021 20:23:52 +0800</pubDate>
+        
+        <guid>https://d1034181036.github.io/p/test/</guid>
+        <description>&lt;img src="https://d1034181036.github.io/p/test/article-img.jpg" alt="Featured image of post Test" /&gt;&lt;p&gt;安安&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Line天氣提醒工具</title>
+        <link>https://d1034181036.github.io/p/line-weather-notify/</link>
+        <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://d1034181036.github.io/p/line-weather-notify/</guid>
+        <description>&lt;p&gt;使用工具：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Google Apps Script&lt;/li&gt;
+&lt;li&gt;OpenWeatherMap&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;github-repository&#34;&gt;GitHub Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/D1034181036/Google-Apps-Script&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/D1034181036/Google-Apps-Script&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;screen-shot&#34;&gt;Screen Shot&lt;/h2&gt;
+&lt;img src=&#34;https://i.imgur.com/1MDZePM.jpg&#34; width=&#34;500&#34;&gt;
+</description>
+        </item>
+        <item>
+        <title>Line生日提醒工具</title>
+        <link>https://d1034181036.github.io/p/line-birthdy-notify/</link>
+        <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://d1034181036.github.io/p/line-birthdy-notify/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;我有一個大學班級的Line群組，
+每當有同學生日時，我們老師就會傳訊息祝他生日快樂，
+而且持續到現在整整七年都還保持著這個習慣，真的是太有毅力了！
+我們有時候還會開玩笑懷疑老師有寫機器人來自動發生日快樂訊息XD&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/VRpRFRi.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/VRpRFRi.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;現在很多人的Facebook會把生日顯示關掉，因此更有可能錯過這些日子。
+所以我們來做個免費、不需架設伺服器的生日提醒系統吧！&lt;/p&gt;
+&lt;h2 id=&#34;line-生日提醒工具&#34;&gt;Line 生日提醒工具&lt;/h2&gt;
+&lt;h3 id=&#34;使用工具&#34;&gt;使用工具&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Google Apps Script&lt;/li&gt;
+&lt;li&gt;Google Sheets&lt;/li&gt;
+&lt;li&gt;Line Notify&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;運作方式&#34;&gt;運作方式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;排程設定每天固定時間執行一次 Script&lt;/li&gt;
+&lt;li&gt;讀取 Google Sheets 取得生日資料&lt;/li&gt;
+&lt;li&gt;若當天有事件發生，呼叫 Line Notify 傳送提醒&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;設定步驟&#34;&gt;設定步驟&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://notify-bot.line.me/my/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Line Notify&lt;/a&gt; 設定通知群組、取得專用Token&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.google.com.tw/intl/zh-TW/sheets/about/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google Sheets&lt;/a&gt; 建立Sheets檔案，設定格式請參考&lt;a class=&#34;link&#34; href=&#34;https://i.imgur.com/n4fAxKe.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;這裡&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://script.google.com/home/start&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google Apps Script&lt;/a&gt; 建立程式檔案，請參考下方程式碼範例，將&lt;code&gt;sheetId&lt;/code&gt;與&lt;code&gt;token&lt;/code&gt;填入&lt;/li&gt;
+&lt;li&gt;設定排程定時執行程式&lt;/li&gt;
+&lt;li&gt;完成！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;程式碼&#34;&gt;程式碼&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-javascript=&#34; data-lang=&#34;javascript=&#34;&gt;function main(){
+  //sheetId可以從網址複製 -&amp;gt;https://docs.google.com/spreadsheets/d/{sheet_id}/
+  const sheetId = &#39;{sheet_id}&#39;;
+  const token = &#39;{line_notify_token}&#39;;
+
+  const spreadSheet = SpreadsheetApp.openById(sheetId);
+  const sheet = spreadSheet.getSheets()[0];
+  const data = sheet.getRange(2,1,sheet.getLastRow()-1,3).getValues();
+
+  const now = new Date();
+  let message = &#39;&#39;;
+  data.forEach(item =&amp;gt; {
+    if(item[0]===now.getMonth()+1 &amp;amp;&amp;amp; item[1]===now.getDate()){
+      message += &#39;\n&#39; + item[2];
+    }
+  });
+  
+  if(message !== &#39;&#39;){
+    message = now.getMonth()+1 + &#39;/&#39; + now.getDate() + message;
+    doPost(token, message);
+  }
+}
+
+function doPost(token, message) {
+  UrlFetchApp.fetch(&#39;https://notify-api.line.me/api/notify&#39;, {
+    &#39;headers&#39;: {
+      &#39;Authorization&#39;: &#39;Bearer &#39; + token,
+    },
+    &#39;method&#39;: &#39;post&#39;,
+    &#39;payload&#39;: {
+      &#39;message&#39;: message
+    }
+  });
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;成果發表&#34;&gt;成果發表&lt;/h2&gt;
+&lt;h3 id=&#34;設定生日列表---google-sheets&#34;&gt;設定生日列表 - Google Sheets&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/n4fAxKe.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/n4fAxKe.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;自動提醒---line-notify&#34;&gt;自動提醒 - Line Notify&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/6GK6DJK.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/6GK6DJK.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>YouTube Video Downloader</title>
+        <link>https://d1034181036.github.io/p/youtube-video-downloader/</link>
+        <pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://d1034181036.github.io/p/youtube-video-downloader/</guid>
+        <description>&lt;p&gt;使用youtube-dl與PHP製作一個極簡單的YT影片下載網站。&lt;/p&gt;
+&lt;h2 id=&#34;github-repository&#34;&gt;GitHub Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/D1034181036/YouTube-Video-Downloader&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/D1034181036/YouTube-Video-Downloader&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;online-demo&#34;&gt;Online Demo&lt;/h2&gt;
+&lt;h3 id=&#34;youtube-video-downloaderhttp1817917437youtube&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;http://18.179.174.37/youtube/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Video Downloader&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;screen-shot&#34;&gt;Screen Shot&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/MFrVaTl.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/MFrVaTl.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;screen_shot&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;screen_shot&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>有 6,987 個人點進來看我把筆放到貓的左手上</title>
+        <link>https://d1034181036.github.io/p/this-video-has-69-views/</link>
+        <pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://d1034181036.github.io/p/this-video-has-69-views/</guid>
+        <description>&lt;h3 id=&#34;youtube影片連結httpsyoutubeast49yvu3x0&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/aST49yvU3x0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube影片連結&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/hYEUdS8.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/hYEUdS8.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;thumbnail&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;thumbnail&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;想法來源tom-scott&#34;&gt;想法來源：Tom Scott&lt;/h2&gt;
+&lt;h4 id=&#34;非常有意思的影片強烈推薦&#34;&gt;非常有意思的影片，強烈推薦。&lt;/h4&gt;
+&lt;h4 id=&#34;this-video-has-x-viewshttpsyoutubebxv14h0kfs0&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/BxV14h0kFs0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;This Video Has X Views&lt;/a&gt;&lt;/h4&gt;
+&lt;h2 id=&#34;自己動手做&#34;&gt;自己動手做&lt;/h2&gt;
+&lt;p&gt;我在這邊選擇使用 Google Apps Script 來實作，原因有以下三點：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;授權 YouTube API 的方式非常簡單。&lt;/li&gt;
+&lt;li&gt;方便連結 Google Sheet 紀錄執行結果。&lt;/li&gt;
+&lt;li&gt;可以排程定時執行，無須自己花錢架設伺服器。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;版本1---基本功能版&#34;&gt;版本1 - 基本功能版&lt;/h2&gt;
+&lt;h3 id=&#34;功能非常的簡單只需要三行程式碼&#34;&gt;功能非常的簡單，只需要三行程式碼：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;呼叫api取得影片資訊&lt;/li&gt;
+&lt;li&gt;更改影片資訊的標題欄(改為現在的觀看次數)&lt;/li&gt;
+&lt;li&gt;呼叫api執行更新&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-javascript=&#34; data-lang=&#34;javascript=&#34;&gt;function basic(){
+  // 影片ID設定
+  const videoId = &amp;quot;aST49yvU3x0&amp;quot;;
+  // 標題格式設定
+  const titleFormat = &amp;quot;有 {views} 個人點進來看我把筆放到貓的左手上&amp;quot;;
+  // 取得影片資訊
+  const videoDetails = YouTube.Videos.list(&amp;quot;snippet, statistics&amp;quot;, { id: videoId })[&#39;items&#39;][0];
+  // 更新標題資訊
+  videoDetails[&#39;snippet&#39;][&#39;title&#39;] = titleFormat.replace(&amp;quot;{views}&amp;quot;, videoDetails[&#39;statistics&#39;][&#39;viewCount&#39;].toLocaleString(&#39;en-US&#39;));
+  // 執行更新
+  YouTube.Videos.update(videoDetails, &amp;quot;id,snippet,statistics&amp;quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;版本2---進階功能版&#34;&gt;版本2 - 進階功能版&lt;/h2&gt;
+&lt;h3 id=&#34;多增加三點功能&#34;&gt;多增加三點功能&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;若觀看次數相同，則不更新影片，這樣可以節省api的呼叫次數。&lt;/li&gt;
+&lt;li&gt;將執行結果記錄在Google App Script Log，方便debug。&lt;/li&gt;
+&lt;li&gt;將更新內容記錄在Google Sheets上，方便隨時查看更新記錄。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;主程式&#34;&gt;主程式&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-javascript=&#34; data-lang=&#34;javascript=&#34;&gt;function main(){
+  const videoId = &amp;quot;aST49yvU3x0&amp;quot;;
+  const titleFormat = &amp;quot;有 {views} 個人點進來看我把筆放到貓的左手上&amp;quot;;
+  const sheetId = &amp;quot;{sheet_id}&amp;quot;;
+
+  const response = YouTube.Videos.list(&amp;quot;snippet, statistics&amp;quot;, { id: videoId });
+  const videoDetails = response[&#39;items&#39;][0];
+
+  const currentTitle = videoDetails[&#39;snippet&#39;][&#39;title&#39;];
+  const currentViews = videoDetails[&#39;statistics&#39;][&#39;viewCount&#39;];
+  const newTitle = titleFormat.replace(&amp;quot;{views}&amp;quot;, currentViews.toLocaleString(&#39;en-US&#39;));
+
+  if(currentTitle !== newTitle){
+    videoDetails[&#39;snippet&#39;][&#39;title&#39;] = newTitle;
+    YouTube.Videos.update(videoDetails, &amp;quot;id,snippet,statistics&amp;quot;);
+    Logger.log(`Update completed: ${newTitle}`);
+    sheetLog(sheetId, currentViews);
+  }else{
+    Logger.log(&amp;quot;No need to update&amp;quot;);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;記錄google-sheets&#34;&gt;記錄Google Sheets&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-javascript=&#34; data-lang=&#34;javascript=&#34;&gt;function sheetLog(sheetId, views){
+  const spreadSheet = SpreadsheetApp.openById(sheetId);
+  const sheet = spreadSheet.getSheets()[0];
+
+  const lastRow = sheet.getLastRow();
+  const currentDate = new Date();
+
+  sheet.getRange(lastRow+1, 1).setValue(currentDate.toLocaleString(&#39;zh-tw&#39;, { timeZone: &#39;Asia/Taipei&#39; }));
+  sheet.getRange(lastRow+1, 2).setValue(views);
+  sheet.getRange(lastRow+1, 3).setValue(currentDate.getTime());
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;如何使用&#34;&gt;如何使用&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;上傳一支影片到YouTube，並且取得影片ID。&lt;/li&gt;
+&lt;li&gt;建立一個Google App Script，設定videoId, titleFormat。&lt;/li&gt;
+&lt;li&gt;設定排程，建議10分鐘執行一次，避免次數用完，詳細請見&lt;a class=&#34;link&#34; href=&#34;https://developers.google.com/youtube/v3/determine_quota_cost&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Quota Calculator&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;(Optional)建立Google Sheet並在Google App Script內設定sheetId。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;成果發表&#34;&gt;成果發表&lt;/h2&gt;
+&lt;h3 id=&#34;更新記錄&#34;&gt;更新記錄&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/tABUTAK.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/tABUTAK.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>5個可以在一週內完成的web作品</title>
+        <link>https://d1034181036.github.io/p/five-tiny-web-projects/</link>
+        <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://d1034181036.github.io/p/five-tiny-web-projects/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;Credit: &lt;a class=&#34;link&#34; href=&#34;https://youtu.be/oluY633rkgI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://youtu.be/oluY633rkgI&lt;/a&gt; - (Kyle - Web Dev Simplified)
+Title: &amp;ldquo;5 Projects You Can Build In A Week That Will Get You Hired&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;這篇文章的內容主要來自Web Dev Simplified頻道的影片，
+我覺得內容很棒很有參考價值，所以來筆記一下，影片連結在上面。&lt;/p&gt;
+&lt;h2 id=&#34;1-web-application-with-third-party-api-前端&#34;&gt;1. Web application with third party api (前端)&lt;/h2&gt;
+&lt;p&gt;找一個你感興趣的第三方API，像是烹飪、電影或是遊戲等等，
+做一個簡單的網站來展示這些資訊與應用。&lt;/p&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;你工作的每一家公司，幾乎都會在某個地方用到第三方API。
+這表示你有能力將第三方API結合到你自己的web application。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;你可以更專注於前端頁面設計與良好的用戶體驗，
+因為你不需要自己建構一個複雜的後端來處理這些資料，
+有些API可能會需要用到簡單的後端，但更多時候API甚至都不需要你使用到後端。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-brochure-site-前端&#34;&gt;2. Brochure site (前端)&lt;/h2&gt;
+&lt;h3 id=&#34;舉例&#34;&gt;舉例&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Landing page for a restaurant&lt;/li&gt;
+&lt;li&gt;Aritst page for showing their work&lt;/li&gt;
+&lt;li&gt;Showcases of business (公司的服務項目或案例)
+&lt;ul&gt;
+&lt;li&gt;Landing page, Contact page&lt;/li&gt;
+&lt;li&gt;Portfolio, Menu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你可以做一個很棒的餐廳網站，
+讓別人一進到你的網站，就可以馬上知道這間餐廳在賣什麼、
+知道餐廳的位置在哪裡、知道如何聯繫餐廳，並且能夠在上面查看Menu。&lt;/p&gt;
+&lt;h3 id=&#34;優點-1&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;這個project可以做得很簡單，也可以做得很複雜，
+你可以讓這個網站在視覺上讓人驚豔以及擁有良好的用戶體驗。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;這代表你有足夠的前端能力做出一個很棒的網站，
+而大部分的公司都會需要一個Landing Page之類的東西。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-e-commerce-site-後端&#34;&gt;3. E-commerce site (後端)&lt;/h2&gt;
+&lt;p&gt;你不需要做一個非常複雜的電商網站Like Amazon。&lt;/p&gt;
+&lt;p&gt;想像一下你有一個插畫家的網站，你需要賣他們的畫或是T-shirt，
+你需要處理付款、處理訂單功能，並告訴他們購買成功的資訊，
+這些都是後端需要處理的事。&lt;/p&gt;
+&lt;p&gt;在這種情況下，你不需要處理複雜的功能，如會員系統(user authentication)，
+你只需要設計簡單的前端商店頁面，並設計一些後端處理過程，
+這樣的話你大概可以在一個禮拜之內完成。&lt;/p&gt;
+&lt;p&gt;如果你想要讓這個專案看起來更厲害，
+你可以把專案時間拉長到一個月或是更久，
+這樣你就可以更focus在後端的功能，例如增加以下功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;庫存管理系統&lt;/li&gt;
+&lt;li&gt;購物車系統&lt;/li&gt;
+&lt;li&gt;會員系統&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點-2&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;這代表你有能力做出一個簡單的電商網站，
+你知道如何處理付款、如何處理購買功能、讓使用者知道購買成功與否。
+而大部分的公司都會在網路上賣一些東西。(應該吧)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;大部分的公司都很在乎他們網站的安全性，
+這也代表你有能力做出一個非常安全的電商網站。(安全性很重要)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-personal-portfolio-site-前端&#34;&gt;4. Personal Portfolio site (前端)&lt;/h2&gt;
+&lt;p&gt;當你要求職的時候，你可以做一個主要的個人網站來：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;介紹你自己&lt;/li&gt;
+&lt;li&gt;展示你的作品集&lt;/li&gt;
+&lt;li&gt;展示你會的技能&lt;/li&gt;
+&lt;li&gt;展示你的簡歷&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點-3&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在這個網站上你可以盡情發揮創意、做出吸引人的網站，
+你可以把你自己的個性充分展現在這個網站上。
+(可以做一個很酷的動畫之類的)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;職場上第一個看你履歷的大部分都是HR或是非技術人員，
+因此他們大概會覺得 &lt;code&gt;哇，這個人知道怎麼做出一個很酷的網站&lt;/code&gt; 。
+所以，請確保你花大部分的時間在前端上面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;5-simple-game-前端後端&#34;&gt;5. Simple game (前端+後端)&lt;/h2&gt;
+&lt;p&gt;開發一個簡單的遊戲，
+最好是規則已經存在的遊戲，例如棋盤類的遊戲。
+這樣的話你就不需要花太多時間在遊戲規則上。
+強烈建議可以做線上多人遊戲，像是線上版的圈圈叉叉(tic-tac)。&lt;/p&gt;
+&lt;h3 id=&#34;優點-4&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;這代表你具有前端與後端的能力，同時也知道如何將其整合在一起，
+還知道如何使用WebSocket的技術做到real-time網站。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;這種專案最棒的地方是這很讓人印象深刻。
+因為製作遊戲需要很多時間&amp;quot;打磨&amp;quot;(Polishing)，
+這也代表你有足夠的耐心，知道怎麼處理問題。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這是另一個類似電商的專案，你可以在一週內製作一個簡單的遊戲。
+如果這是一個你感興趣的項目，你可以擴展這個遊戲，
+它可以變成是一個數週或是數個月的專案。&lt;/p&gt;
+&lt;h2 id=&#34;結語&#34;&gt;結語&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Kyle在影片中說：
+現在你可能會想，這些專案是不是太簡單了，或是對於找工作不是那麼重要。
+但我可以向你保證，我做了五個裡面的其中三個，
+而我的雇主超級喜歡，並且讓我得到我的第一份工作。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;所以，如果你還沒有這些項目，從這裡面選一個開始做吧！&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>今彩539的中獎機率有多低？</title>
+        <link>https://d1034181036.github.io/p/letto539-simulation/</link>
+        <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://d1034181036.github.io/p/letto539-simulation/</guid>
+        <description>&lt;p&gt;最近一直被威力彩獨得27億的新聞轟炸，身邊朋友都一直說想要去買樂透。
+因此讓我好奇樂透的機率到底有多低？一起來了解一下吧～&lt;/p&gt;
+&lt;h4 id=&#34;為什麼這篇文章是講今彩539&#34;&gt;為什麼這篇文章是講今彩539？&lt;/h4&gt;
+&lt;p&gt;因為今彩539的規則比較簡單。&lt;/p&gt;
+&lt;h2 id=&#34;今彩539---模擬程式&#34;&gt;今彩539 - 模擬程式&lt;/h2&gt;
+&lt;p&gt;模擬程式網址：&lt;a class=&#34;link&#34; href=&#34;https://d1034181036.github.io/Letto539/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://d1034181036.github.io/Letto539/&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;為什麼用javascript做模擬&#34;&gt;為什麼用JavaScript做模擬？&lt;/h4&gt;
+&lt;p&gt;因為我想用網頁demo，這樣就可以讓大家一起玩玩看，
+而且我不常使用到JavaScript，因此對我來說是個不錯的練習。&lt;/p&gt;
+&lt;h2 id=&#34;今彩539---規則說明&#34;&gt;今彩539 - 規則說明&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;今彩539是一種樂透型遊戲，您必須從01~39的號碼中任選5個號碼進行投注。
+您的五個選號中，如有二個以上（含二個號碼）對中當期開出之五個號碼，
+即為中獎，並可依規定兌領獎金。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;reference: &lt;a class=&#34;link&#34; href=&#34;https://www.taiwanlottery.com.tw/DailyCash/index.asp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.taiwanlottery.com.tw/DailyCash/index.asp&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;中獎機率與獎金&#34;&gt;中獎機率與獎金&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;相同號碼數&lt;/th&gt;
+&lt;th&gt;組合數&lt;/th&gt;
+&lt;th&gt;機率&lt;/th&gt;
+&lt;th&gt;獎金&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0.00017%&lt;/td&gt;
+&lt;td&gt;$8,000,000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;170&lt;/td&gt;
+&lt;td&gt;0.02%&lt;/td&gt;
+&lt;td&gt;$20,000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;5,610&lt;/td&gt;
+&lt;td&gt;0.97%&lt;/td&gt;
+&lt;td&gt;$300&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;59,840&lt;/td&gt;
+&lt;td&gt;10.39%&lt;/td&gt;
+&lt;td&gt;$50&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;231,880&lt;/td&gt;
+&lt;td&gt;40.27%&lt;/td&gt;
+&lt;td&gt;$0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;278,256&lt;/td&gt;
+&lt;td&gt;48.32%&lt;/td&gt;
+&lt;td&gt;$0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;程式模擬&#34;&gt;程式模擬&lt;/h2&gt;
+&lt;p&gt;本次實驗總共做三次模擬，情況如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;情況A：分成10000天買，每次只購買一組隨機號碼，每天的開獎號碼會改變。&lt;/li&gt;
+&lt;li&gt;情況B：一次購買10000張隨機號碼，組合可重複，開獎號碼不變。 (不包牌)&lt;/li&gt;
+&lt;li&gt;情況C：一次購買10000張隨機號碼，組合不可重複，開獎號碼不變。(包牌)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;相同號碼數&lt;/th&gt;
+&lt;th&gt;情況A&lt;/th&gt;
+&lt;th&gt;情況B&lt;/th&gt;
+&lt;th&gt;情況C&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;103&lt;/td&gt;
+&lt;td&gt;99&lt;/td&gt;
+&lt;td&gt;97&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;1,068&lt;/td&gt;
+&lt;td&gt;1,004&lt;/td&gt;
+&lt;td&gt;1,033&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;3,959&lt;/td&gt;
+&lt;td&gt;4,003&lt;/td&gt;
+&lt;td&gt;4,098&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;4,867&lt;/td&gt;
+&lt;td&gt;4,890&lt;/td&gt;
+&lt;td&gt;4,769&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;組合數&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;9,909&lt;/td&gt;
+&lt;td&gt;10,000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;獲利&lt;/td&gt;
+&lt;td&gt;-355,700&lt;/td&gt;
+&lt;td&gt;-340,100&lt;/td&gt;
+&lt;td&gt;-359,250&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;實驗結果討論&#34;&gt;實驗結果討論&lt;/h2&gt;
+&lt;h3 id=&#34;問題1分成不同天買有差嗎情況a與情況b有差嗎&#34;&gt;問題1：分成不同天買有差嗎？（情況A與情況B有差嗎？）&lt;/h3&gt;
+&lt;p&gt;其實差別不大，中獎次數都跟算出來機率的差不多，
+但是每天的心情可能會不太一樣？&lt;/p&gt;
+&lt;h3 id=&#34;問題2包牌能幹嘛情況b跟情況c有差嗎&#34;&gt;問題2：包牌能幹嘛？（情況B跟情況C有差嗎？）&lt;/h3&gt;
+&lt;p&gt;如果沒中頭獎的話，其實沒什麼差，虧本的錢錢也差不多。
+值得注意的是中頭獎的機率不太一樣，
+情況B的機率是 9909/575757 。（可以重複中頭獎，3組以內不用平分）
+情況C的機率是 10000/575757 。&lt;/p&gt;
+&lt;h3 id=&#34;問題3如果我把所有組合都買下來會發生什麼事&#34;&gt;問題3：如果我把所有組合都買下來會發生什麼事？&lt;/h3&gt;
+&lt;p&gt;這邊就不列表了，從上方的中獎機率表格就可以算出來。
+你總共會拿到 575,757 種組合的彩券，其中有 65,621 張會中獎。
+總共會虧 1,271 萬元。&lt;/p&gt;
+&lt;h3 id=&#34;問題4如果我每天買一張今彩539大概在第幾天會中頭獎&#34;&gt;問題4：如果我每天買一張今彩539，大概在第幾天會中頭獎？&lt;/h3&gt;
+&lt;p&gt;我模擬了100次中頭獎的情況，結果如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最幸運的一次：第 12,243 天中獎(33年)&lt;/li&gt;
+&lt;li&gt;最雖小的一次：第 2,798,804 天中獎(7667年)&lt;/li&gt;
+&lt;li&gt;中位數：第 425,833 天中獎(1166年)&lt;/li&gt;
+&lt;li&gt;平均數：第 603,802 天中獎(1654年)&lt;/li&gt;
+&lt;li&gt;平均每次中頭獎後累計會虧 1300 萬元。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;感謝閱讀&#34;&gt;感謝閱讀～&lt;/h2&gt;
+&lt;p&gt;Github Repository:
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/D1034181036/Letto539&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/D1034181036/Letto539&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>爐石戰記 - 如何爬上傳說第一名？</title>
+        <link>https://d1034181036.github.io/p/hearthstone-rank1/</link>
+        <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://d1034181036.github.io/p/hearthstone-rank1/</guid>
+        <description>&lt;h1 id=&#34;爐石戰記---如何爬上傳說第一名&#34;&gt;爐石戰記 - 如何爬上傳說第一名？&lt;/h1&gt;
+&lt;p&gt;Hi 我是ImSoHappy，
+曾多次登上亞服傳說第一名，在這過程中學到了許多經驗，
+因此決定在這裡做個紀錄 :)&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/bmRn3z2.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/bmRn3z2.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;眾所皆知，爐石身為一款卡牌遊戲，
+除了技術成分以外，也有許多運氣成分，
+在這種情況下，我的主要策略有兩點：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用快攻套牌、季初快速爬上傳說&lt;/li&gt;
+&lt;li&gt;使用強牌進行場次堆疊&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在傳說前段玩家實力都差不多的情況下，運氣也佔很大一部分，
+就像是擲銅板一樣，你要連續擲到同一面五次才能登上第一名，
+因此時間上的場次堆疊絕對也是重要的一環。&lt;/p&gt;
+&lt;h2 id=&#34;以我2014年登頂的方式為例&#34;&gt;以我2014年登頂的方式為例&lt;/h2&gt;
+&lt;h3 id=&#34;策略1---資訊蒐集找出適合自己的強牌&#34;&gt;策略1 - 資訊蒐集、找出適合自己的強牌&lt;/h3&gt;
+&lt;p&gt;在以前沒有牌組統計網站的年代，我會到實況網站上面找高手的台，
+只要看到縮圖是傳說前段的台我都會點進去，
+接著進行主要三個步驟：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;抄牌組&lt;/li&gt;
+&lt;li&gt;實戰練習、學習打法&lt;/li&gt;
+&lt;li&gt;進行牌組微調、減少失誤、提高勝率&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;各版本都會有幾套特別強勢、勝率較高的牌，
+我會從模仿開始，參考高手的打法，
+並且練習到足夠的場次到融會貫通為止。&lt;/p&gt;
+&lt;p&gt;現在則可以直接到牌組統計網站如 &lt;a class=&#34;link&#34; href=&#34;https://hsreplay.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HSReplay.net&lt;/a&gt;，
+根據勝率、平均遊戲時間找出適合你的牌組。&lt;/p&gt;
+&lt;h3 id=&#34;策略2---使用勝率較高的快攻套牌爬傳說效率&#34;&gt;策略2 - 使用勝率較高的快攻套牌爬傳說(效率)&lt;/h3&gt;
+&lt;p&gt;要知道在賽季初期==前段玩家越少、你就越容易登頂==，
+因此效率就變得很重要！（堆積場次也是）&lt;/p&gt;
+&lt;p&gt;在各版本下幾乎都有勝率不錯的快攻套牌，
+我認為只要勝率在55%以上的都可以算是很好的快攻套牌，
+這類型的套牌通常都很好上手、遊戲時間又短，能幫助你快速登上傳說，
+因此我推薦Rank25 ~ 傳說前百的階段都可以使用，
+直到你覺得勝率降低，排名開始卡住為止。&lt;/p&gt;
+&lt;h3 id=&#34;策略3---使用12組勝率高的強牌來堆積場次&#34;&gt;策略3 - 使用1~2組勝率高的強牌來堆積場次&lt;/h3&gt;
+&lt;p&gt;當你已經在傳說前百了，
+這時的策略就是拿出你最有自信、勝率最高的牌，
+根據環境調整成適合你的牌組，盡量讓自己的勝率達到60%以上，
+接著就是擲硬幣的環節，不斷堆積場次就可以了。&lt;/p&gt;
+&lt;p&gt;我會建議將打牌的速度降低，
+尤其是留牌的部分，我覺得留牌真的是勝敗的核心關鍵，
+並且仔細思考每一手的各種情況，以不失誤為主要原則，
+剩下的就只是堆積場次了，輸贏不用看得太重。&lt;/p&gt;
+&lt;h3 id=&#34;總結&#34;&gt;總結：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;從模仿開始，組建1~2套勝率高的牌組，練習到勝率60%以上&lt;/li&gt;
+&lt;li&gt;使用快攻牌組，有效率的爬到傳說前段 (最好是季初)&lt;/li&gt;
+&lt;li&gt;使用強勢、勝率高的牌組堆積場次到第一名&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;心得&#34;&gt;心得&lt;/h2&gt;
+&lt;p&gt;我認為這種達成目標的方式在生活中的許多情況下都適用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;搞懂遊戲規則、蒐集資訊、向高手學習並融會貫通&lt;/li&gt;
+&lt;li&gt;訂定目標、為目標擬定策略&lt;/li&gt;
+&lt;li&gt;徹底執行、在過程中不斷修正與內化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;搞懂這個技巧之後，
+也讓我從一個學業成績吊車尾的學渣，變成系排#1的卷哥。
+(嗯&amp;hellip; 學店生自嗨)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2014年10月&#34;&gt;2014年10月&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/hALlEPS.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/hALlEPS.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2015年3月&#34;&gt;2015年3月&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/amaPMtA.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/amaPMtA.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/STvbo1a.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/STvbo1a.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/qIOCMQm.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/qIOCMQm.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2015年7月&#34;&gt;2015年7月&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/LRTrKUO.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/LRTrKUO.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2021年4月&#34;&gt;2021年4月&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/i0RML2r.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/i0RML2r.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>英文課程筆記</title>
+        <link>https://d1034181036.github.io/p/%E8%8B%B1%E6%96%87%E8%AA%B2%E7%A8%8B%E7%AD%86%E8%A8%98/</link>
+        <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://d1034181036.github.io/p/%E8%8B%B1%E6%96%87%E8%AA%B2%E7%A8%8B%E7%AD%86%E8%A8%98/</guid>
+        <description>&lt;h3 id=&#34;課程名稱就不講了不太推純粹記錄一下筆記給自己看&#34;&gt;課程名稱就不講了，不太推，純粹記錄一下筆記給自己看。&lt;/h3&gt;
+&lt;h1 id=&#34;part-1-學外語的心法&#34;&gt;Part 1: 學外語的心法&lt;/h1&gt;
+&lt;h2 id=&#34;一種語言等於一個人&#34;&gt;一種語言等於一個人&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;不要怕出錯，要開口講話才可以進步。&lt;/li&gt;
+&lt;li&gt;每天學一些新的單字或句子就能夠快速進步。&lt;/li&gt;
+&lt;li&gt;將語言運用在生活與工作中。&lt;/li&gt;
+&lt;li&gt;使用語言交朋友。&lt;/li&gt;
+&lt;li&gt;學語言從融入文化開始，要入境隨俗。&lt;/li&gt;
+&lt;li&gt;認真練習。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;開始學習語言的第一步&#34;&gt;開始學習語言的第一步：&lt;/h4&gt;
+&lt;p&gt;運用基本的語言技能，和來自世界各地的外國人交流。&lt;/p&gt;
+&lt;h2 id=&#34;全世界有70億人口只有36億人是英文母語者5&#34;&gt;全世界有70億人口，只有3.6億人是英文母語者(5%)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;每個人都是自己國家的大使，要當外國人的朋友。&lt;/li&gt;
+&lt;li&gt;語言是用來解決問題的。&lt;/li&gt;
+&lt;li&gt;講得清楚比口音更重要。&lt;/li&gt;
+&lt;li&gt;在對話中結合幽默感，可以講一些小段子，例如：
+&lt;code&gt;台灣跟泰國不一樣，泰國人騎大象，高雄人騎野豬。&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;學習語言的文法與結構&#34;&gt;學習語言的文法與結構&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;現在進行式&lt;/li&gt;
+&lt;li&gt;現在簡單式&lt;/li&gt;
+&lt;li&gt;過去式&lt;/li&gt;
+&lt;li&gt;未來式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;大量的閱讀&#34;&gt;大量的閱讀&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;閱讀可以自然的學習新的單字，而死背則非常容易忘記。&lt;/li&gt;
+&lt;li&gt;閱讀會讓人慢慢理解整個句子的意思。&lt;/li&gt;
+&lt;li&gt;讓閱讀變成每天固定的習慣。&lt;/li&gt;
+&lt;li&gt;閱讀時可以大聲的朗讀出來。
+&lt;ul&gt;
+&lt;li&gt;Tips: 可以錄音，聽自己的發音正不正確。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;建立自己的字典，將新單字與句子記錄在筆記本中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;練習寫作&#34;&gt;練習寫作&lt;/h2&gt;
+&lt;p&gt;每天花10~15分鐘寫一些簡單的故事、寫郵件、寫日記。
+從簡單的句子開始練習，不要給自己太多的壓力，隨手寫就行。&lt;/p&gt;
+&lt;h1 id=&#34;part-2-十分鐘會面&#34;&gt;Part 2: 十分鐘會面&lt;/h1&gt;
+&lt;h2 id=&#34;遇到外國人不知道第一句話該講什麼&#34;&gt;遇到外國人，不知道第一句話該講什麼？&lt;/h2&gt;
+&lt;p&gt;只要清楚的說出基本的句子，你就能夠與來自世界各地的人交談。&lt;/p&gt;
+&lt;p&gt;Tips: 主動問對方問題&lt;/p&gt;
+&lt;h2 id=&#34;問路的基本英文&#34;&gt;問路的基本英文&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Go straight ahead&lt;/li&gt;
+&lt;li&gt;Turn back / Go back&lt;/li&gt;
+&lt;li&gt;Turn left&lt;/li&gt;
+&lt;li&gt;Go along&lt;/li&gt;
+&lt;li&gt;Cross the street&lt;/li&gt;
+&lt;li&gt;Take the frist road on the left&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s on the left&lt;/li&gt;
+&lt;li&gt;The best way is to&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;開啟一個聊天主題-small-talk&#34;&gt;開啟一個聊天主題 (small talk)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Weather&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How do you feel about Taiwan&amp;rsquo;s weather?&lt;/li&gt;
+&lt;li&gt;Do you think Taiwan is too hot?&lt;/li&gt;
+&lt;li&gt;How about your country?&lt;/li&gt;
+&lt;li&gt;Is it very humid like Taiwan?&lt;/li&gt;
+&lt;li&gt;Kind of chilly this morning, isn&amp;rsquo;t it?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Weekend&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How did you spend the weekend?&lt;/li&gt;
+&lt;li&gt;Did you do anything special on the weekend?&lt;/li&gt;
+&lt;li&gt;How was your weekend?&lt;/li&gt;
+&lt;li&gt;Where were you last week?&lt;/li&gt;
+&lt;li&gt;(invite)Do you have any plans for the weekend?&lt;/li&gt;
+&lt;li&gt;(invite)Would you like to join us on the weekend?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;尋找與外國人的共鳴點&#34;&gt;尋找與外國人的共鳴點&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;遇到歐洲人可以聊足球&lt;/li&gt;
+&lt;li&gt;遇到非洲人可以聊動物(三小？)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使用購物美食交朋友&#34;&gt;使用購物、美食交朋友&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;What do you wanna eat?&lt;/li&gt;
+&lt;li&gt;This food is delicious.&lt;/li&gt;
+&lt;li&gt;Is that your best price.&lt;/li&gt;
+&lt;li&gt;Can you lower the price please?&lt;/li&gt;
+&lt;li&gt;記下常用的形容詞&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;用英文開玩笑&#34;&gt;用英文開玩笑&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;準備一些簡單的笑話&lt;/li&gt;
+&lt;li&gt;找對話的共同點&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使用進階單字&#34;&gt;使用進階單字&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;告訴別人台灣不是泰國，說明差別。&lt;/li&gt;
+&lt;li&gt;講解兩岸關係&lt;/li&gt;
+&lt;li&gt;告訴別人自己不想談政治&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;介紹知名企業或科技&#34;&gt;介紹知名企業或科技&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ASUS&lt;/li&gt;
+&lt;li&gt;ACER&lt;/li&gt;
+&lt;li&gt;MediaTek&lt;/li&gt;
+&lt;li&gt;GIGABTYE&lt;/li&gt;
+&lt;li&gt;GIANT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;討論國際新聞&#34;&gt;討論國際新聞&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;台灣的防疫表現&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;天天練習英文&#34;&gt;天天練習英文&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;語言是活的，跟肌肉一樣要訓練。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;功課一寫出在你的領域中的30個專業英文單字&#34;&gt;功課一：寫出在你的領域中的30個專業英文單字&lt;/h2&gt;
+&lt;h2 id=&#34;功課二寫下自己的自我介紹至少要有20句&#34;&gt;功課二：寫下自己的自我介紹，至少要有20句。&lt;/h2&gt;
+&lt;h2 id=&#34;功課三介紹自己與自己的國家&#34;&gt;功課三：介紹自己與自己的國家&lt;/h2&gt;
+&lt;p&gt;這種情況很常見，所以可以預先準備好台詞。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

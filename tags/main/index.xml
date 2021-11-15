@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>main on KevinChen</title>
+    <link>https://d1034181036.github.io/tags/main/</link>
+    <description>Recent content in main on KevinChen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Fri, 05 Nov 2021 14:44:39 +0800</lastBuildDate><atom:link href="https://d1034181036.github.io/tags/main/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>快速架設VPN伺服器</title>
+      <link>https://d1034181036.github.io/p/build-vpn-server/</link>
+      <pubDate>Fri, 05 Nov 2021 14:44:39 +0800</pubDate>
+      
+      <guid>https://d1034181036.github.io/p/build-vpn-server/</guid>
+      <description>Step1: 租一台Linux虛擬主機 選擇自己喜歡的虛擬主機供應商，租一台虛擬主機。
+我目前是使用AWS的 Lightsail (VPS主機)，每個月只要3.5美元。
+Step2: 安裝 OpenVPN Server 本文使用 Nyr/openvpn-install 進行安裝 sudo su wget https://git.io/vpn -O openvpn-install.sh &amp;amp;&amp;amp; bash openvpn-install.sh 輸入完成後接著它會問題幾個問題：  UDP (建議) / TCP port: (建議更改) DNS server 第一個用戶名稱  範例如下圖： Step3: 下載你的使用者檔案 架設好OpenVPN Server之後，
+目錄下會多一個.ovpn檔，例如：KevinChen.ovpn
+我自己是習慣用FileZilla下載到client端。
+Step4: 安裝 OpenVPN Client 在你想用VPN的電腦上面安裝 OpenVPN Client
+然後把ovpn檔案丟進去，就完成囉～
+在IP查詢網站上面測試看看：
+
+結語 使用這個方法只需要5分鐘就可以搞定，感謝社群的貢獻，
+如果這個方法有幫助到你，歡迎去作者的github幫他按個星星哦～
+我真的很喜歡這些有效又簡單的解決方案。
+實測2021/08/30可行。
+沒有什麼方法是永遠有效的，至少現在還能用就好。</description>
+    </item>
+    
+    <item>
+      <title>爐石戰記 - 如何爬上傳說第一名？</title>
+      <link>https://d1034181036.github.io/p/hearthstone-rank1/</link>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://d1034181036.github.io/p/hearthstone-rank1/</guid>
+      <description>爐石戰記 - 如何爬上傳說第一名？ Hi 我是ImSoHappy， 曾多次登上亞服傳說第一名，在這過程中學到了許多經驗， 因此決定在這裡做個紀錄 :)
+
+前言 眾所皆知，爐石身為一款卡牌遊戲， 除了技術成分以外，也有許多運氣成分， 在這種情況下，我的主要策略有兩點：
+ 使用快攻套牌、季初快速爬上傳說 使用強牌進行場次堆疊  在傳說前段玩家實力都差不多的情況下，運氣也佔很大一部分， 就像是擲銅板一樣，你要連續擲到同一面五次才能登上第一名， 因此時間上的場次堆疊絕對也是重要的一環。
+以我2014年登頂的方式為例 策略1 - 資訊蒐集、找出適合自己的強牌 在以前沒有牌組統計網站的年代，我會到實況網站上面找高手的台， 只要看到縮圖是傳說前段的台我都會點進去， 接著進行主要三個步驟：
+ 抄牌組 實戰練習、學習打法 進行牌組微調、減少失誤、提高勝率  各版本都會有幾套特別強勢、勝率較高的牌， 我會從模仿開始，參考高手的打法， 並且練習到足夠的場次到融會貫通為止。
+現在則可以直接到牌組統計網站如 HSReplay.net， 根據勝率、平均遊戲時間找出適合你的牌組。
+策略2 - 使用勝率較高的快攻套牌爬傳說(效率) 要知道在賽季初期==前段玩家越少、你就越容易登頂==， 因此效率就變得很重要！（堆積場次也是）
+在各版本下幾乎都有勝率不錯的快攻套牌， 我認為只要勝率在55%以上的都可以算是很好的快攻套牌， 這類型的套牌通常都很好上手、遊戲時間又短，能幫助你快速登上傳說， 因此我推薦Rank25 ~ 傳說前百的階段都可以使用， 直到你覺得勝率降低，排名開始卡住為止。
+策略3 - 使用1~2組勝率高的強牌來堆積場次 當你已經在傳說前百了， 這時的策略就是拿出你最有自信、勝率最高的牌， 根據環境調整成適合你的牌組，盡量讓自己的勝率達到60%以上， 接著就是擲硬幣的環節，不斷堆積場次就可以了。
+我會建議將打牌的速度降低， 尤其是留牌的部分，我覺得留牌真的是勝敗的核心關鍵， 並且仔細思考每一手的各種情況，以不失誤為主要原則， 剩下的就只是堆積場次了，輸贏不用看得太重。
+總結：  從模仿開始，組建1~2套勝率高的牌組，練習到勝率60%以上 使用快攻牌組，有效率的爬到傳說前段 (最好是季初) 使用強勢、勝率高的牌組堆積場次到第一名  心得 我認為這種達成目標的方式在生活中的許多情況下都適用：</description>
+    </item>
+    
+  </channel>
+</rss>

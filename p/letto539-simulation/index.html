@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='最近一直被威力彩獨得27億的新聞轟炸，身邊朋友都一直說想要去買樂透。 因此讓我好奇樂透的機率到底有多低？一起來了解一下吧～
+為什麼這篇文章是講今彩539？ 因為今彩539的規則比較簡單。
+今彩539 - 模擬程式 模擬程式網址：https://d1034181036.github.io/Letto539/
+為什麼用JavaScript做模擬？ 因為我想用網頁demo，這樣就可以讓大家一起玩玩看， 而且我不常使用到JavaScript，因此對我來說是個不錯的練習。
+今彩539 - 規則說明  今彩539是一種樂透型遊戲，您必須從01~39的號碼中任選5個號碼進行投注。 您的五個選號中，如有二個以上（含二個號碼）對中當期開出之五個號碼， 即為中獎，並可依規定兌領獎金。
+ reference: https://www.taiwanlottery.com.tw/DailyCash/index.asp
+中獎機率與獎金    相同號碼數 組合數 機率 獎金     5 1 0.00017% $8,000,000   4 170 0.02% $20,000   3 5,610 0.97% $300   2 59,840 10.39% $50   1 231,880 40.27% $0   0 278,256 48.32% $0    程式模擬 本次實驗總共做三次模擬，情況如下：'><title>今彩539的中獎機率有多低？</title>
+
+<link rel='canonical' href='https://d1034181036.github.io/p/letto539-simulation/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='今彩539的中獎機率有多低？'>
+<meta property='og:description' content='最近一直被威力彩獨得27億的新聞轟炸，身邊朋友都一直說想要去買樂透。 因此讓我好奇樂透的機率到底有多低？一起來了解一下吧～
+為什麼這篇文章是講今彩539？ 因為今彩539的規則比較簡單。
+今彩539 - 模擬程式 模擬程式網址：https://d1034181036.github.io/Letto539/
+為什麼用JavaScript做模擬？ 因為我想用網頁demo，這樣就可以讓大家一起玩玩看， 而且我不常使用到JavaScript，因此對我來說是個不錯的練習。
+今彩539 - 規則說明  今彩539是一種樂透型遊戲，您必須從01~39的號碼中任選5個號碼進行投注。 您的五個選號中，如有二個以上（含二個號碼）對中當期開出之五個號碼， 即為中獎，並可依規定兌領獎金。
+ reference: https://www.taiwanlottery.com.tw/DailyCash/index.asp
+中獎機率與獎金    相同號碼數 組合數 機率 獎金     5 1 0.00017% $8,000,000   4 170 0.02% $20,000   3 5,610 0.97% $300   2 59,840 10.39% $50   1 231,880 40.27% $0   0 278,256 48.32% $0    程式模擬 本次實驗總共做三次模擬，情況如下：'>
+<meta property='og:url' content='https://d1034181036.github.io/p/letto539-simulation/'>
+<meta property='og:site_name' content='KevinChen'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='web' /><meta property='article:published_time' content='2021-08-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-08-27T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="今彩539的中獎機率有多低？">
+<meta name="twitter:description" content="最近一直被威力彩獨得27億的新聞轟炸，身邊朋友都一直說想要去買樂透。 因此讓我好奇樂透的機率到底有多低？一起來了解一下吧～
+為什麼這篇文章是講今彩539？ 因為今彩539的規則比較簡單。
+今彩539 - 模擬程式 模擬程式網址：https://d1034181036.github.io/Letto539/
+為什麼用JavaScript做模擬？ 因為我想用網頁demo，這樣就可以讓大家一起玩玩看， 而且我不常使用到JavaScript，因此對我來說是個不錯的練習。
+今彩539 - 規則說明  今彩539是一種樂透型遊戲，您必須從01~39的號碼中任選5個號碼進行投注。 您的五個選號中，如有二個以上（含二個號碼）對中當期開出之五個號碼， 即為中獎，並可依規定兌領獎金。
+ reference: https://www.taiwanlottery.com.tw/DailyCash/index.asp
+中獎機率與獎金    相同號碼數 組合數 機率 獎金     5 1 0.00017% $8,000,000   4 170 0.02% $20,000   3 5,610 0.97% $300   2 59,840 10.39% $50   1 231,880 40.27% $0   0 278,256 48.32% $0    程式模擬 本次實驗總共做三次模擬，情況如下：">
+    </head>
+    <body class="
+    article-page 
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        on-phone--column extended
+    
+">
+    
+        <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切換選單">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu0f81677ca53754b440b5703bcb9bd355_921618_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">😏</span>
+                
+            </figure>
+            
+        
+        
+        <h1 class="site-name"><a href="/">KevinChen</a></h1>
+        <h2 class="site-description">Hi, 歡迎來到我的部落格!</h2></header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首頁</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>關於</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文章庫</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜尋</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>夜晚模式</span>
+            </li>
+        
+    </ol>
+</aside>
+
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/p/letto539-simulation/">今彩539的中獎機率有多低？</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2021/08/27</time>
+            </div>
+        
+
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>最近一直被威力彩獨得27億的新聞轟炸，身邊朋友都一直說想要去買樂透。
+因此讓我好奇樂透的機率到底有多低？一起來了解一下吧～</p>
+<h4 id="為什麼這篇文章是講今彩539">為什麼這篇文章是講今彩539？</h4>
+<p>因為今彩539的規則比較簡單。</p>
+<h2 id="今彩539---模擬程式">今彩539 - 模擬程式</h2>
+<p>模擬程式網址：<a class="link" href="https://d1034181036.github.io/Letto539/"  target="_blank" rel="noopener"
+    >https://d1034181036.github.io/Letto539/</a></p>
+<h4 id="為什麼用javascript做模擬">為什麼用JavaScript做模擬？</h4>
+<p>因為我想用網頁demo，這樣就可以讓大家一起玩玩看，
+而且我不常使用到JavaScript，因此對我來說是個不錯的練習。</p>
+<h2 id="今彩539---規則說明">今彩539 - 規則說明</h2>
+<blockquote>
+<p>今彩539是一種樂透型遊戲，您必須從01~39的號碼中任選5個號碼進行投注。
+您的五個選號中，如有二個以上（含二個號碼）對中當期開出之五個號碼，
+即為中獎，並可依規定兌領獎金。</p>
+</blockquote>
+<p>reference: <a class="link" href="https://www.taiwanlottery.com.tw/DailyCash/index.asp"  target="_blank" rel="noopener"
+    >https://www.taiwanlottery.com.tw/DailyCash/index.asp</a></p>
+<h2 id="中獎機率與獎金">中獎機率與獎金</h2>
+<table>
+<thead>
+<tr>
+<th>相同號碼數</th>
+<th>組合數</th>
+<th>機率</th>
+<th>獎金</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>1</td>
+<td>0.00017%</td>
+<td>$8,000,000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>170</td>
+<td>0.02%</td>
+<td>$20,000</td>
+</tr>
+<tr>
+<td>3</td>
+<td>5,610</td>
+<td>0.97%</td>
+<td>$300</td>
+</tr>
+<tr>
+<td>2</td>
+<td>59,840</td>
+<td>10.39%</td>
+<td>$50</td>
+</tr>
+<tr>
+<td>1</td>
+<td>231,880</td>
+<td>40.27%</td>
+<td>$0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>278,256</td>
+<td>48.32%</td>
+<td>$0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="程式模擬">程式模擬</h2>
+<p>本次實驗總共做三次模擬，情況如下：</p>
+<ul>
+<li>情況A：分成10000天買，每次只購買一組隨機號碼，每天的開獎號碼會改變。</li>
+<li>情況B：一次購買10000張隨機號碼，組合可重複，開獎號碼不變。 (不包牌)</li>
+<li>情況C：一次購買10000張隨機號碼，組合不可重複，開獎號碼不變。(包牌)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>相同號碼數</th>
+<th>情況A</th>
+<th>情況B</th>
+<th>情況C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>103</td>
+<td>99</td>
+<td>97</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1,068</td>
+<td>1,004</td>
+<td>1,033</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3,959</td>
+<td>4,003</td>
+<td>4,098</td>
+</tr>
+<tr>
+<td>0</td>
+<td>4,867</td>
+<td>4,890</td>
+<td>4,769</td>
+</tr>
+<tr>
+<td>組合數</td>
+<td>X</td>
+<td>9,909</td>
+<td>10,000</td>
+</tr>
+<tr>
+<td>獲利</td>
+<td>-355,700</td>
+<td>-340,100</td>
+<td>-359,250</td>
+</tr>
+</tbody>
+</table>
+<h2 id="實驗結果討論">實驗結果討論</h2>
+<h3 id="問題1分成不同天買有差嗎情況a與情況b有差嗎">問題1：分成不同天買有差嗎？（情況A與情況B有差嗎？）</h3>
+<p>其實差別不大，中獎次數都跟算出來機率的差不多，
+但是每天的心情可能會不太一樣？</p>
+<h3 id="問題2包牌能幹嘛情況b跟情況c有差嗎">問題2：包牌能幹嘛？（情況B跟情況C有差嗎？）</h3>
+<p>如果沒中頭獎的話，其實沒什麼差，虧本的錢錢也差不多。
+值得注意的是中頭獎的機率不太一樣，
+情況B的機率是 9909/575757 。（可以重複中頭獎，3組以內不用平分）
+情況C的機率是 10000/575757 。</p>
+<h3 id="問題3如果我把所有組合都買下來會發生什麼事">問題3：如果我把所有組合都買下來會發生什麼事？</h3>
+<p>這邊就不列表了，從上方的中獎機率表格就可以算出來。
+你總共會拿到 575,757 種組合的彩券，其中有 65,621 張會中獎。
+總共會虧 1,271 萬元。</p>
+<h3 id="問題4如果我每天買一張今彩539大概在第幾天會中頭獎">問題4：如果我每天買一張今彩539，大概在第幾天會中頭獎？</h3>
+<p>我模擬了100次中頭獎的情況，結果如下：</p>
+<ul>
+<li>最幸運的一次：第 12,243 天中獎(33年)</li>
+<li>最雖小的一次：第 2,798,804 天中獎(7667年)</li>
+<li>中位數：第 425,833 天中獎(1166年)</li>
+<li>平均數：第 603,802 天中獎(1654年)</li>
+<li>平均每次中頭獎後累計會虧 1300 萬元。</li>
+</ul>
+<h2 id="感謝閱讀">感謝閱讀～</h2>
+<p>Github Repository:
+<a class="link" href="https://github.com/D1034181036/Letto539"  target="_blank" rel="noopener"
+    >https://github.com/D1034181036/Letto539</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/web/">web</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 KevinChen
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
