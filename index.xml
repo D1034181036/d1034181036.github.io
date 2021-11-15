@@ -12,7 +12,7 @@
         <pubDate>Fri, 05 Nov 2021 14:44:39 +0800</pubDate>
         
         <guid>https://d1034181036.github.io/p/build-vpn-server/</guid>
-        <description>&lt;img src="https://d1034181036.github.io/article-img.jpg" alt="Featured image of post 快速架設VPN伺服器" /&gt;&lt;h3 id=&#34;step1-租一台linux虛擬主機&#34;&gt;Step1: 租一台Linux虛擬主機&lt;/h3&gt;
+        <description>&lt;h3 id=&#34;step1-租一台linux虛擬主機&#34;&gt;Step1: 租一台Linux虛擬主機&lt;/h3&gt;
 &lt;p&gt;選擇自己喜歡的虛擬主機供應商，租一台虛擬主機。&lt;br&gt;
 我目前是使用AWS的 &lt;a class=&#34;link&#34; href=&#34;https://aws.amazon.com/tw/lightsail/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Lightsail&lt;/a&gt; (VPS主機)，每個月只要3.5美元。&lt;/p&gt;
