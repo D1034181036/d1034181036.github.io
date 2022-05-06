@@ -6,7 +6,7 @@
     <description>Recent content in web on KevinChen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 29 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://d1034181036.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://d1034181036.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Line生日提醒工具</title>
       <link>https://d1034181036.github.io/p/line-birthdy-notify/</link>
@@ -17,6 +17,18 @@
 
 現在很多人的Facebook會把生日顯示關掉，因此更有可能錯過這些日子。 所以我們來做個免費、不需架設伺服器的生日提醒系統吧！
 Line 生日提醒工具 使用工具  Google Apps Script Google Sheets Line Notify  運作方式  排程設定每天固定時間執行一次 Script 讀取 Google Sheets 取得生日資料 若當天有事件發生，呼叫 Line Notify 傳送提醒  設定步驟  Line Notify 設定通知群組、取得專用Token Google Sheets 建立Sheets檔案，設定格式請參考這裡 Google Apps Script 建立程式檔案，請參考下方程式碼範例，將sheetId與token填入 設定排程定時執行程式 完成！  程式碼 function main(){ //sheetId可以從網址複製 -&amp;gt;https://docs.google.com/spreadsheets/d/{sheet_id}/ const sheetId = &#39;{sheet_id}&#39;; const token = &#39;{line_notify_token}&#39;; const spreadSheet = SpreadsheetApp.openById(sheetId); const sheet = spreadSheet.getSheets()[0]; const data = sheet.</description>
+    </item>
+    
+    <item>
+      <title>反向代理工具：Nginx Proxy Manager</title>
+      <link>https://d1034181036.github.io/p/nginx-proxy-manager/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://d1034181036.github.io/p/nginx-proxy-manager/</guid>
+      <description>官方網站：https://nginxproxymanager.com/
+ 為什麼要使用Nginx Proxy Manager？  多人管理系統、圖形化介面 漂亮的介面、一目了然所有的Proxy設定 內建Let&amp;rsquo;s Encrypt，免費又快速的幫你加上HTTPS  安裝方法：使用Docker-Compose Step1: 安裝 Docker Step2: 安裝 Docker-Compose [Optional] Step3: 建立 docker-compose.yml version: &#39;3&#39;services:app:image: &#39;jc21/nginx-proxy-manager:latest&#39;restart: unless-stoppedports:- &#39;80:80&#39;- &#39;81:81&#39;- &#39;443:443&#39;volumes:- ./data:/data- ./letsencrypt:/etc/letsencryptStep4: 啟動服務 docker-compose up -d Step5: 開始使用 - http://127.0.0.1:81 若是使用SSH安裝，可以依照不同情況遠端連到127.0.0.1:81。 以下幾種連接方式提供做為參考：
+ SSH Tunnel 公開實體IP / NAT轉址 區網虛擬IP  預設管理員帳密
+Email: admin@example.comPassword: changeme 新增Proxy示範</description>
     </item>
     
     <item>
