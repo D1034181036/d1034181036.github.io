@@ -42,7 +42,7 @@
 &lt;ul&gt;
 &lt;li&gt;排程設定每天固定時間執行一次 Script&lt;/li&gt;
 &lt;li&gt;讀取 Google Sheets 取得生日資料&lt;/li&gt;
-&lt;li&gt;若當天有事件發生，呼叫 Line Notify 傳送提醒&lt;/li&gt;
+&lt;li&gt;若近 7 天有人生日就呼叫 Line Notify 傳送提醒 (可自行調整天數)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;設定步驟&#34;&gt;設定步驟&lt;/h3&gt;
 &lt;ol&gt;
@@ -59,8 +59,9 @@
 &lt;h3 id=&#34;程式碼&#34;&gt;程式碼&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-javascript=&#34; data-lang=&#34;javascript=&#34;&gt;function main(){
   //sheetId可以從網址複製 -&amp;gt;https://docs.google.com/spreadsheets/d/{sheet_id}/
-  const sheetId = &#39;{sheet_id}&#39;;
-  const token = &#39;{line_notify_token}&#39;;
+  const sheetId = &#39;&#39;;
+  const token = &#39;&#39;;
+  const notifyDays = 7;
 
   const spreadSheet = SpreadsheetApp.openById(sheetId);
   const sheet = spreadSheet.getSheets()[0];
@@ -69,13 +70,22 @@
   const now = new Date();
   let message = &#39;&#39;;
   data.forEach(item =&amp;gt; {
-    if(item[0]===now.getMonth()+1 &amp;amp;&amp;amp; item[1]===now.getDate()){
-      message += &#39;\n&#39; + item[2];
+    let birthday = new Date();
+    birthday.setMonth(item[0]-1);
+    birthday.setDate(item[1]);
+    if(now &amp;gt; birthday){
+      birthday.setFullYear(birthday.getFullYear()+1);
+    }
+
+    let check_date = new Date();
+    check_date.setDate(now.getDate() + notifyDays);
+
+    if(check_date &amp;gt;= birthday){
+      message += &#39;\n&#39; + item[0] + &#39;/&#39; + item[1] + &#39; - &#39; + item[2];
     }
   });
   
   if(message !== &#39;&#39;){
-    message = now.getMonth()+1 + &#39;/&#39; + now.getDate() + message;
     doPost(token, message);
   }
 }
@@ -195,60 +205,12 @@ Password: changeme
 </description>
         </item>
         <item>
-        <title>Line天氣提醒工具 (純記錄)</title>
-        <link>https://d1034181036.github.io/p/line-weather-notify/</link>
-        <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://d1034181036.github.io/p/line-weather-notify/</guid>
-        <description>&lt;img src="https://d1034181036.github.io/p/line-weather-notify/article-img.jpg" alt="Featured image of post Line天氣提醒工具 (純記錄)" /&gt;&lt;p&gt;使用工具：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Google Apps Script&lt;/li&gt;
-&lt;li&gt;OpenWeatherMap&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;github-repository&#34;&gt;GitHub Repository&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/D1034181036/Google-Apps-Script&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/D1034181036/Google-Apps-Script&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;screen-shot&#34;&gt;Screen Shot&lt;/h2&gt;
-&lt;img src=&#34;https://i.imgur.com/1MDZePM.jpg&#34; width=&#34;500&#34;&gt;
-</description>
-        </item>
-        <item>
-        <title>製作一個YouTube影片下載網站</title>
-        <link>https://d1034181036.github.io/p/youtube-video-downloader/</link>
-        <pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://d1034181036.github.io/p/youtube-video-downloader/</guid>
-        <description>&lt;img src="https://d1034181036.github.io/p/youtube-video-downloader/article-img.jpg" alt="Featured image of post 製作一個YouTube影片下載網站" /&gt;&lt;p&gt;使用youtube-dl與PHP製作一個極簡單的YT影片下載網站。&lt;/p&gt;
-&lt;h2 id=&#34;github-repository&#34;&gt;GitHub Repository&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/D1034181036/YouTube-Video-Downloader&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/D1034181036/YouTube-Video-Downloader&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;online-demo&#34;&gt;Online Demo&lt;/h2&gt;
-&lt;h3 id=&#34;youtube-video-downloaderhttp526924823youtube&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;http://52.69.248.23/youtube/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;YouTube Video Downloader&lt;/a&gt;&lt;/h3&gt;
-&lt;h2 id=&#34;screen-shot&#34;&gt;Screen Shot&lt;/h2&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://i.imgur.com/MFrVaTl.png&#34; &gt;
-		&lt;img src=&#34;https://i.imgur.com/MFrVaTl.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			alt=&#34;screen_shot&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;screen_shot&lt;/figcaption&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>有 6,987 個人點進來看我把筆放到貓的左手上</title>
-        <link>https://d1034181036.github.io/p/this-video-has-69-views/</link>
+        <title>有 1,247 個人點進來看我把筆放到貓的左手上</title>
+        <link>https://d1034181036.github.io/p/this-video-has-1247-views/</link>
         <pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://d1034181036.github.io/p/this-video-has-69-views/</guid>
-        <description>&lt;img src="https://d1034181036.github.io/p/this-video-has-69-views/article-img.png" alt="Featured image of post 有 6,987 個人點進來看我把筆放到貓的左手上" /&gt;&lt;h3 id=&#34;youtube影片連結httpsyoutubeast49yvu3x0&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/aST49yvU3x0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>https://d1034181036.github.io/p/this-video-has-1247-views/</guid>
+        <description>&lt;img src="https://d1034181036.github.io/p/this-video-has-1247-views/article-img.png" alt="Featured image of post 有 1,247 個人點進來看我把筆放到貓的左手上" /&gt;&lt;h3 id=&#34;youtube影片連結httpsyoutubeast49yvu3x0&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/aST49yvU3x0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;YouTube影片連結&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
@@ -411,139 +373,6 @@ wget https://git.io/vpn -O openvpn-install.sh &amp;amp;&amp;amp; bash openvpn-in
 我真的很喜歡這些有效又簡單的解決方案。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;實測2021/08/30可行。&lt;/strong&gt;&lt;br&gt;
 沒有什麼方法是永遠有效的，至少現在還能用就好。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>5個可以在一週內完成的web作品</title>
-        <link>https://d1034181036.github.io/p/five-tiny-web-side-projects/</link>
-        <pubDate>Mon, 30 Aug 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://d1034181036.github.io/p/five-tiny-web-side-projects/</guid>
-        <description>&lt;img src="https://d1034181036.github.io/p/five-tiny-web-side-projects/article-img.jpg" alt="Featured image of post 5個可以在一週內完成的web作品" /&gt;&lt;blockquote&gt;
-&lt;p&gt;Credit: &lt;a class=&#34;link&#34; href=&#34;https://youtu.be/oluY633rkgI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://youtu.be/oluY633rkgI&lt;/a&gt; - (Kyle - Web Dev Simplified)
-Title: &amp;ldquo;5 Projects You Can Build In A Week That Will Get You Hired&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;這篇文章的內容主要來自Web Dev Simplified頻道的影片，
-我覺得內容很棒很有參考價值，所以來筆記一下，影片連結在上面。&lt;/p&gt;
-&lt;h2 id=&#34;1-web-application-with-third-party-api-前端&#34;&gt;1. Web application with third party api (前端)&lt;/h2&gt;
-&lt;p&gt;找一個你感興趣的第三方API，像是烹飪、電影或是遊戲等等，
-做一個簡單的網站來展示這些資訊與應用。&lt;/p&gt;
-&lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;你工作的每一家公司，幾乎都會在某個地方用到第三方API。
-這表示你有能力將第三方API結合到你自己的web application。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;你可以更專注於前端頁面設計與良好的用戶體驗，
-因為你不需要自己建構一個複雜的後端來處理這些資料，
-有些API可能會需要用到簡單的後端，但更多時候API甚至都不需要你使用到後端。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2-brochure-site-前端&#34;&gt;2. Brochure site (前端)&lt;/h2&gt;
-&lt;h3 id=&#34;舉例&#34;&gt;舉例&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Landing page for a restaurant&lt;/li&gt;
-&lt;li&gt;Aritst page for showing their work&lt;/li&gt;
-&lt;li&gt;Showcases of business (公司的服務項目或案例)
-&lt;ul&gt;
-&lt;li&gt;Landing page, Contact page&lt;/li&gt;
-&lt;li&gt;Portfolio, Menu&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;你可以做一個很棒的餐廳網站，
-讓別人一進到你的網站，就可以馬上知道這間餐廳在賣什麼、
-知道餐廳的位置在哪裡、知道如何聯繫餐廳，並且能夠在上面查看Menu。&lt;/p&gt;
-&lt;h3 id=&#34;優點-1&#34;&gt;優點&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;這個project可以做得很簡單，也可以做得很複雜，
-你可以讓這個網站在視覺上讓人驚豔以及擁有良好的用戶體驗。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;這代表你有足夠的前端能力做出一個很棒的網站，
-而大部分的公司都會需要一個Landing Page之類的東西。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;3-e-commerce-site-後端&#34;&gt;3. E-commerce site (後端)&lt;/h2&gt;
-&lt;p&gt;你不需要做一個非常複雜的電商網站Like Amazon。&lt;/p&gt;
-&lt;p&gt;想像一下你有一個插畫家的網站，你需要賣他們的畫或是T-shirt，
-你需要處理付款、處理訂單功能，並告訴他們購買成功的資訊，
-這些都是後端需要處理的事。&lt;/p&gt;
-&lt;p&gt;在這種情況下，你不需要處理複雜的功能，如會員系統(user authentication)，
-你只需要設計簡單的前端商店頁面，並設計一些後端處理過程，
-這樣的話你大概可以在一個禮拜之內完成。&lt;/p&gt;
-&lt;p&gt;如果你想要讓這個專案看起來更厲害，
-你可以把專案時間拉長到一個月或是更久，
-這樣你就可以更focus在後端的功能，例如增加以下功能：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;庫存管理系統&lt;/li&gt;
-&lt;li&gt;購物車系統&lt;/li&gt;
-&lt;li&gt;會員系統&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;優點-2&#34;&gt;優點&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;這代表你有能力做出一個簡單的電商網站，
-你知道如何處理付款、如何處理購買功能、讓使用者知道購買成功與否。
-而大部分的公司都會在網路上賣一些東西。(應該吧)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;大部分的公司都很在乎他們網站的安全性，
-這也代表你有能力做出一個非常安全的電商網站。(安全性很重要)&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;4-personal-portfolio-site-前端&#34;&gt;4. Personal Portfolio site (前端)&lt;/h2&gt;
-&lt;p&gt;當你要求職的時候，你可以做一個主要的個人網站來：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;介紹你自己&lt;/li&gt;
-&lt;li&gt;展示你的作品集&lt;/li&gt;
-&lt;li&gt;展示你會的技能&lt;/li&gt;
-&lt;li&gt;展示你的簡歷&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;優點-3&#34;&gt;優點&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;在這個網站上你可以盡情發揮創意、做出吸引人的網站，
-你可以把你自己的個性充分展現在這個網站上。
-(可以做一個很酷的動畫之類的)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;職場上第一個看你履歷的大部分都是HR或是非技術人員，
-因此他們大概會覺得 &lt;code&gt;哇，這個人知道怎麼做出一個很酷的網站&lt;/code&gt; 。
-所以，請確保你花大部分的時間在前端上面。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;5-simple-game-前端後端&#34;&gt;5. Simple game (前端+後端)&lt;/h2&gt;
-&lt;p&gt;開發一個簡單的遊戲，
-最好是規則已經存在的遊戲，例如棋盤類的遊戲。
-這樣的話你就不需要花太多時間在遊戲規則上。
-強烈建議可以做線上多人遊戲，像是線上版的圈圈叉叉(tic-tac)。&lt;/p&gt;
-&lt;h3 id=&#34;優點-4&#34;&gt;優點&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;這代表你具有前端與後端的能力，同時也知道如何將其整合在一起，
-還知道如何使用WebSocket的技術做到real-time網站。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;這種專案最棒的地方是這很讓人印象深刻。
-因為製作遊戲需要很多時間&amp;quot;打磨&amp;quot;(Polishing)，
-這也代表你有足夠的耐心，知道怎麼處理問題。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;這是另一個類似電商的專案，你可以在一週內製作一個簡單的遊戲。
-如果這是一個你感興趣的項目，你可以擴展這個遊戲，
-它可以變成是一個數週或是數個月的專案。&lt;/p&gt;
-&lt;h2 id=&#34;結語&#34;&gt;結語&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Kyle在影片中說：
-現在你可能會想，這些專案是不是太簡單了，或是對於找工作不是那麼重要。
-但我可以向你保證，我做了五個裡面的其中三個，
-而我的雇主超級喜歡，並且讓我得到我的第一份工作。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;所以，如果你還沒有這些項目，從這裡面選一個開始做吧！&lt;/p&gt;
 </description>
         </item>
         
