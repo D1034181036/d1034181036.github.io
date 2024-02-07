@@ -2,7 +2,7 @@ baseurl: "https://d1034181036.github.io"
 languageCode: zh-tw
 theme: hugo-theme-stack
 paginate: 5
-title: KevinChen
+title: My Blog
 
 # Change it to your Disqus shortname before using
 disqusShortname: hugo-theme-stack
@@ -38,12 +38,12 @@ params:
         lastUpdated: 2006/01/02
 
     sidebar:
-        emoji: 😏
-        subtitle: Hi, 歡迎來到我的部落格!
+        #emoji: 😏
+        subtitle: 我的部落格
         avatar:
             enabled: true
             local: true
-            src: img/avatar.jpg
+            #src: img/avatar.jpg
 
     article:
         math: false
