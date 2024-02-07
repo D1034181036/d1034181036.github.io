@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='有 1,247 個人點進來看我把筆放到貓的左手上'>
 <meta property='og:description' content='自動更新YouTube影片標題，讓別人以為你閒到像個神經病～'>
 <meta property='og:url' content='https://d1034181036.github.io/p/this-video-has-1247-views/'>
-<meta property='og:site_name' content='KevinChen'>
+<meta property='og:site_name' content='My Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='web' /><meta property='article:published_time' content='2021-09-21T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-09-21T00:00:00&#43;00:00'/><meta property='og:image' content='https://d1034181036.github.io/p/this-video-has-1247-views/article-img.png' />
 <meta name="twitter:title" content="有 1,247 個人點進來看我把筆放到貓的左手上">
 <meta name="twitter:description" content="自動更新YouTube影片標題，讓別人以為你閒到像個神經病～"><meta name="twitter:card" content="summary_large_image">
@@ -61,20 +61,18 @@
                     
                     
                         
-                        <img src="/img/avatar_hu0f81677ca53754b440b5703bcb9bd355_921618_300x0_resize_q75_box.jpg" width="300"
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
 
                 
-                    <span class="emoji">😏</span>
-                
             </figure>
             
         
         
-        <h1 class="site-name"><a href="/">KevinChen</a></h1>
-        <h2 class="site-description">Hi, 歡迎來到我的部落格!</h2></header>
+        <h1 class="site-name"><a href="/">My Blog</a></h1>
+        <h2 class="site-description">我的部落格</h2></header>
 
     <ol class="menu" id="main-menu">
         
@@ -276,15 +274,15 @@
 </ol>
 <pre tabindex="0"><code class="language-javascript=" data-lang="javascript=">function basic(){
   // 影片ID設定
-  const videoId = &quot;aST49yvU3x0&quot;;
+  const videoId = &#34;aST49yvU3x0&#34;;
   // 標題格式設定
-  const titleFormat = &quot;有 {views} 個人點進來看我把筆放到貓的左手上&quot;;
+  const titleFormat = &#34;有 {views} 個人點進來看我把筆放到貓的左手上&#34;;
   // 取得影片資訊
-  const videoDetails = YouTube.Videos.list(&quot;snippet, statistics&quot;, { id: videoId })['items'][0];
+  const videoDetails = YouTube.Videos.list(&#34;snippet, statistics&#34;, { id: videoId })[&#39;items&#39;][0];
   // 更新標題資訊
-  videoDetails['snippet']['title'] = titleFormat.replace(&quot;{views}&quot;, videoDetails['statistics']['viewCount'].toLocaleString('en-US'));
+  videoDetails[&#39;snippet&#39;][&#39;title&#39;] = titleFormat.replace(&#34;{views}&#34;, videoDetails[&#39;statistics&#39;][&#39;viewCount&#39;].toLocaleString(&#39;en-US&#39;));
   // 執行更新
-  YouTube.Videos.update(videoDetails, &quot;id,snippet,statistics&quot;);
+  YouTube.Videos.update(videoDetails, &#34;id,snippet,statistics&#34;);
 }
 </code></pre><h2 id="版本2---進階功能版">版本2 - 進階功能版</h2>
 <h3 id="多增加三點功能">多增加三點功能</h3>
@@ -295,24 +293,24 @@
 </ol>
 <h3 id="主程式">主程式</h3>
 <pre tabindex="0"><code class="language-javascript=" data-lang="javascript=">function main(){
-  const videoId = &quot;aST49yvU3x0&quot;;
-  const titleFormat = &quot;有 {views} 個人點進來看我把筆放到貓的左手上&quot;;
-  const sheetId = &quot;{sheet_id}&quot;;
+  const videoId = &#34;aST49yvU3x0&#34;;
+  const titleFormat = &#34;有 {views} 個人點進來看我把筆放到貓的左手上&#34;;
+  const sheetId = &#34;{sheet_id}&#34;;
 
-  const response = YouTube.Videos.list(&quot;snippet, statistics&quot;, { id: videoId });
-  const videoDetails = response['items'][0];
+  const response = YouTube.Videos.list(&#34;snippet, statistics&#34;, { id: videoId });
+  const videoDetails = response[&#39;items&#39;][0];
 
-  const currentTitle = videoDetails['snippet']['title'];
-  const currentViews = videoDetails['statistics']['viewCount'];
-  const newTitle = titleFormat.replace(&quot;{views}&quot;, currentViews.toLocaleString('en-US'));
+  const currentTitle = videoDetails[&#39;snippet&#39;][&#39;title&#39;];
+  const currentViews = videoDetails[&#39;statistics&#39;][&#39;viewCount&#39;];
+  const newTitle = titleFormat.replace(&#34;{views}&#34;, currentViews.toLocaleString(&#39;en-US&#39;));
 
   if(currentTitle !== newTitle){
-    videoDetails['snippet']['title'] = newTitle;
-    YouTube.Videos.update(videoDetails, &quot;id,snippet,statistics&quot;);
+    videoDetails[&#39;snippet&#39;][&#39;title&#39;] = newTitle;
+    YouTube.Videos.update(videoDetails, &#34;id,snippet,statistics&#34;);
     Logger.log(`Update completed: ${newTitle}`);
     sheetLog(sheetId, currentViews);
   }else{
-    Logger.log(&quot;No need to update&quot;);
+    Logger.log(&#34;No need to update&#34;);
   }
 }
 </code></pre><h3 id="記錄google-sheets">記錄Google Sheets</h3>
@@ -323,7 +321,7 @@
   const lastRow = sheet.getLastRow();
   const currentDate = new Date();
 
-  sheet.getRange(lastRow+1, 1).setValue(currentDate.toLocaleString('zh-tw', { timeZone: 'Asia/Taipei' }));
+  sheet.getRange(lastRow+1, 1).setValue(currentDate.toLocaleString(&#39;zh-tw&#39;, { timeZone: &#39;Asia/Taipei&#39; }));
   sheet.getRange(lastRow+1, 2).setValue(views);
   sheet.getRange(lastRow+1, 3).setValue(currentDate.getTime());
 }
@@ -384,12 +382,12 @@
         
             2021 - 
         
-        2022 KevinChen
+        2024 My Blog
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 

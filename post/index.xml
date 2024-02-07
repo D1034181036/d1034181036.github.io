@@ -1,68 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on KevinChen</title>
+    <title>Posts on My Blog</title>
     <link>https://d1034181036.github.io/post/</link>
-    <description>Recent content in Posts on KevinChen</description>
+    <description>Recent content in Posts on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://d1034181036.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Jan 2024 12:06:08 +0800</lastBuildDate>
+    <atom:link href="https://d1034181036.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Line生日提醒工具</title>
-      <link>https://d1034181036.github.io/p/line-birthdy-notify/</link>
-      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://d1034181036.github.io/p/line-birthdy-notify/</guid>
-      <description>前言 我有一個大學班級的Line群組， 每當有同學生日時，我們老師就會傳訊息祝他生日快樂， 而且持續到現在整整七年都還保持著這個習慣，真的是太有毅力了！ 我們有時候還會開玩笑懷疑老師有寫機器人來自動發生日快樂訊息XD
-
-現在很多人的Facebook會把生日顯示關掉，因此更有可能錯過這些日子。 所以我們來做個免費、不需架設伺服器的生日提醒系統吧！
-Line 生日提醒工具 使用工具  Google Apps Script Google Sheets Line Notify  運作方式  排程設定每天固定時間執行一次 Script 讀取 Google Sheets 取得生日資料 若近 7 天有人生日就呼叫 Line Notify 傳送提醒 (可自行調整天數)  設定步驟  Line Notify 設定通知群組、取得專用Token Google Sheets 建立Sheets檔案，設定格式請參考這裡 Google Apps Script 建立程式檔案，請參考下方程式碼範例，將sheetId與token填入 設定排程定時執行程式 完成！  程式碼 function main(){ //sheetId可以從網址複製 -&amp;gt;https://docs.google.com/spreadsheets/d/{sheet_id}/ const sheetId = &#39;&#39;; const token = &#39;&#39;; const notifyDays = 7; const spreadSheet = SpreadsheetApp.</description>
+      <title>Hello2024</title>
+      <link>https://d1034181036.github.io/p/hello2024/</link>
+      <pubDate>Tue, 02 Jan 2024 12:06:08 +0800</pubDate>
+      <guid>https://d1034181036.github.io/p/hello2024/</guid>
+      <description>HIHI123 </description>
     </item>
-    
     <item>
       <title>反向代理工具：Nginx Proxy Manager</title>
       <link>https://d1034181036.github.io/p/nginx-proxy-manager/</link>
       <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://d1034181036.github.io/p/nginx-proxy-manager/</guid>
-      <description>官方網站：https://nginxproxymanager.com/
- 為什麼要使用Nginx Proxy Manager？  多人管理系統、圖形化介面 漂亮的介面、一目了然所有的Proxy設定 內建Let&amp;rsquo;s Encrypt，免費又快速的幫你加上HTTPS  安裝方法：使用Docker-Compose Step1: 安裝 Docker Step2: 安裝 Docker-Compose [Optional] Step3: 建立 docker-compose.yml version: &#39;3&#39;services:app:image: &#39;jc21/nginx-proxy-manager:latest&#39;restart: unless-stoppedports:- &#39;80:80&#39;- &#39;81:81&#39;- &#39;443:443&#39;volumes:- ./data:/data- ./letsencrypt:/etc/letsencryptStep4: 啟動服務 docker-compose up -d Step5: 開始使用 - http://127.0.0.1:81 若是使用SSH安裝，可以依照不同情況遠端連到127.0.0.1:81。 以下幾種連接方式提供做為參考：
- SSH Tunnel 公開實體IP / NAT轉址 區網虛擬IP  預設管理員帳密
-Email: admin@example.comPassword: changeme 新增Proxy示範</description>
+      <description> 官方網站：https://nginxproxymanager.com/&#xA;為什麼要使用Nginx Proxy Manager？ 多人管理系統、圖形化介面 漂亮的介面、一目了然所有的Proxy設定 內建Let&amp;rsquo;s Encrypt，免費又快速的幫你加上HTTPS 安裝方法：使用Docker-Compose Step1: 安裝 Docker Step2: 安裝 Docker-Compose [Optional] Step3: 建立 docker-compose.yml version: &amp;#39;3&amp;#39;&#xD;services:&#xD;app:&#xD;image: &amp;#39;jc21/nginx-proxy-manager:latest&amp;#39;&#xD;restart: unless-stopped&#xD;ports:&#xD;- &amp;#39;80:80&amp;#39;&#xD;- &amp;#39;81:81&amp;#39;&#xD;- &amp;#39;443:443&amp;#39;&#xD;volumes:&#xD;- ./data:/data&#xD;- ./letsencrypt:/etc/letsencrypt Step4: 啟動服務 docker-compose up -d Step5: 開始使用 - http://127.0.0.1:81 若是使用SSH安裝，可以依照不同情況遠端連到127.0.0.1:81。 以下幾種連接方式提供做為參考：&#xA;SSH Tunnel 公開實體IP / NAT轉址 區網虛擬IP 預設管理員帳密&#xA;Email: admin@example.com&#xD;Password: changeme 新增Proxy示範 Proxy列表 </description>
     </item>
-    
+    <item>
+      <title>Line生日提醒工具</title>
+      <link>https://d1034181036.github.io/p/line-birthdy-notify/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://d1034181036.github.io/p/line-birthdy-notify/</guid>
+      <description>前言 我有一個大學班級的Line群組， 每當有同學生日時，我們老師就會傳訊息祝他生日快樂， 而且持續到現在整整七年都還保持著這個習慣，真的是太有毅力了！ 我們有時候還會開玩笑懷疑老師有寫機器人來自動發生日快樂訊息XD&#xA;現在很多人的Facebook會把生日顯示關掉，因此更有可能錯過這些日子。 所以我們來做個免費、不需架設伺服器的生日提醒系統吧！&#xA;Line 生日提醒工具 使用工具 Google Apps Script Google Sheets Line Notify 運作方式 排程設定每天固定時間執行一次 Script 讀取 Google Sheets 取得生日資料 若近 7 天有人生日就呼叫 Line Notify 傳送提醒 (可自行調整天數) 設定步驟 Line Notify 設定通知群組、取得專用Token Google Sheets 建立Sheets檔案，設定格式請參考這裡 Google Apps Script 建立程式檔案，請參考下方程式碼範例，將sheetId與token填入 設定排程定時執行程式 完成！ 程式碼 function main(){&#xD;//sheetId可以從網址複製 -&amp;gt;https://docs.google.com/spreadsheets/d/{sheet_id}/&#xD;const sheetId = &amp;#39;&amp;#39;;&#xD;const token = &amp;#39;&amp;#39;;&#xD;const notifyDays = 7;&#xD;const spreadSheet = SpreadsheetApp.openById(sheetId);&#xD;const sheet = spreadSheet.getSheets()[0];&#xD;const data = sheet.</description>
+    </item>
     <item>
       <title>有 1,247 個人點進來看我把筆放到貓的左手上</title>
       <link>https://d1034181036.github.io/p/this-video-has-1247-views/</link>
       <pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://d1034181036.github.io/p/this-video-has-1247-views/</guid>
-      <description>YouTube影片連結 thumbnail
-想法來源：Tom Scott 非常有意思的影片，強烈推薦。 This Video Has X Views 自己動手做 我在這邊選擇使用 Google Apps Script 來實作，原因有以下三點：
- 授權 YouTube API 的方式非常簡單。 方便連結 Google Sheet 紀錄執行結果。 可以排程定時執行，無須自己花錢架設伺服器。  版本1 - 基本功能版 功能非常的簡單，只需要三行程式碼：  呼叫api取得影片資訊 更改影片資訊的標題欄(改為現在的觀看次數) 呼叫api執行更新  function basic(){ // 影片ID設定 const videoId = &amp;quot;aST49yvU3x0&amp;quot;; // 標題格式設定 const titleFormat = &amp;quot;有 {views} 個人點進來看我把筆放到貓的左手上&amp;quot;; // 取得影片資訊 const videoDetails = YouTube.Videos.list(&amp;quot;snippet, statistics&amp;quot;, { id: videoId })[&#39;items&#39;][0]; // 更新標題資訊 videoDetails[&#39;snippet&#39;][&#39;title&#39;] = titleFormat.replace(&amp;quot;{views}&amp;quot;, videoDetails[&#39;statistics&#39;][&#39;viewCount&#39;].</description>
+      <description>YouTube影片連結 thumbnail&#xD;想法來源：Tom Scott 非常有意思的影片，強烈推薦。 This Video Has X Views 自己動手做 我在這邊選擇使用 Google Apps Script 來實作，原因有以下三點：&#xA;授權 YouTube API 的方式非常簡單。 方便連結 Google Sheet 紀錄執行結果。 可以排程定時執行，無須自己花錢架設伺服器。 版本1 - 基本功能版 功能非常的簡單，只需要三行程式碼： 呼叫api取得影片資訊 更改影片資訊的標題欄(改為現在的觀看次數) 呼叫api執行更新 function basic(){&#xD;// 影片ID設定&#xD;const videoId = &amp;#34;aST49yvU3x0&amp;#34;;&#xD;// 標題格式設定&#xD;const titleFormat = &amp;#34;有 {views} 個人點進來看我把筆放到貓的左手上&amp;#34;;&#xD;// 取得影片資訊&#xD;const videoDetails = YouTube.Videos.list(&amp;#34;snippet, statistics&amp;#34;, { id: videoId })[&amp;#39;items&amp;#39;][0];&#xD;// 更新標題資訊&#xD;videoDetails[&amp;#39;snippet&amp;#39;][&amp;#39;title&amp;#39;] = titleFormat.replace(&amp;#34;{views}&amp;#34;, videoDetails[&amp;#39;statistics&amp;#39;][&amp;#39;viewCount&amp;#39;].toLocaleString(&amp;#39;en-US&amp;#39;));&#xD;// 執行更新&#xD;YouTube.Videos.update(videoDetails, &amp;#34;id,snippet,statistics&amp;#34;);&#xD;} 版本2 - 進階功能版 多增加三點功能 若觀看次數相同，則不更新影片，這樣可以節省api的呼叫次數。 將執行結果記錄在Google App Script Log，方便debug。 將更新內容記錄在Google Sheets上，方便隨時查看更新記錄。 主程式 function main(){&#xD;const videoId = &amp;#34;aST49yvU3x0&amp;#34;;&#xD;const titleFormat = &amp;#34;有 {views} 個人點進來看我把筆放到貓的左手上&amp;#34;;&#xD;const sheetId = &amp;#34;{sheet_id}&amp;#34;;&#xD;const response = YouTube.</description>
     </item>
-    
     <item>
       <title>快速架設VPN伺服器</title>
       <link>https://d1034181036.github.io/p/build-vpn-server/</link>
       <pubDate>Tue, 31 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://d1034181036.github.io/p/build-vpn-server/</guid>
-      <description>註：我先預設會讀這篇的都會用Linux&amp;hellip; Step1: 租一台Linux虛擬主機 選擇自己喜歡的虛擬主機供應商，租一台虛擬主機。
-我目前是使用AWS的 Lightsail (VPS主機)，每個月只要3.5美元。
-Step2: 安裝 OpenVPN Server 本文使用 Nyr/openvpn-install 進行安裝 sudo su wget https://git.io/vpn -O openvpn-install.sh &amp;amp;&amp;amp; bash openvpn-install.sh 輸入完成後接著它會問題幾個問題：  UDP (建議) / TCP port: (建議更改) DNS server 第一個用戶名稱  範例如下圖： Step3: 下載你的使用者檔案 架設好OpenVPN Server之後，
-目錄下會多一個.ovpn檔，例如：KevinChen.ovpn
-我自己是習慣用FileZilla下載到client端。
-Step4: 安裝 OpenVPN Client 在你想用VPN的電腦上面安裝 OpenVPN Client
-然後把ovpn檔案丟進去，就完成囉～
-在IP查詢網站上面測試看看：
-
-結語 使用這個方法只需要5分鐘就可以搞定，感謝社群的貢獻，
-如果這個方法有幫助到你，歡迎去作者的github幫他按個星星哦～
-我真的很喜歡這些有效又簡單的解決方案。
-實測2021/08/30可行。
-沒有什麼方法是永遠有效的，至少現在還能用就好。</description>
+      <description>註：我先預設會讀這篇的都會用Linux&amp;hellip; Step1: 租一台Linux虛擬主機 選擇自己喜歡的虛擬主機供應商，租一台虛擬主機。&#xA;我目前是使用AWS的 Lightsail (VPS主機)，每個月只要3.5美元。&#xA;Step2: 安裝 OpenVPN Server 本文使用 Nyr/openvpn-install 進行安裝 sudo su&#xD;wget https://git.io/vpn -O openvpn-install.sh &amp;amp;&amp;amp; bash openvpn-install.sh 輸入完成後接著它會問題幾個問題： UDP (建議) / TCP port: (建議更改) DNS server 第一個用戶名稱 範例如下圖： Step3: 下載你的使用者檔案 架設好OpenVPN Server之後，&#xA;目錄下會多一個.ovpn檔，例如：KevinChen.ovpn&#xA;我自己是習慣用FileZilla下載到client端。&#xA;Step4: 安裝 OpenVPN Client 在你想用VPN的電腦上面安裝 OpenVPN Client&#xA;然後把ovpn檔案丟進去，就完成囉～&#xA;在IP查詢網站上面測試看看：&#xA;結語 使用這個方法只需要5分鐘就可以搞定，感謝社群的貢獻，&#xA;如果這個方法有幫助到你，歡迎去作者的github幫他按個星星哦～&#xA;我真的很喜歡這些有效又簡單的解決方案。&#xA;實測2021/08/30可行。&#xA;沒有什麼方法是永遠有效的，至少現在還能用就好。</description>
     </item>
-    
   </channel>
 </rss>

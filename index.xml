@@ -1,12 +1,95 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>KevinChen</title>
+        <title>My Blog</title>
         <link>https://d1034181036.github.io/</link>
-        <description>Recent content on KevinChen</description>
+        <description>Recent content on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://d1034181036.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 02 Jan 2024 12:06:08 +0800</lastBuildDate><atom:link href="https://d1034181036.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hello2024</title>
+        <link>https://d1034181036.github.io/p/hello2024/</link>
+        <pubDate>Tue, 02 Jan 2024 12:06:08 +0800</pubDate>
+        
+        <guid>https://d1034181036.github.io/p/hello2024/</guid>
+        <description>&lt;h2 id=&#34;hihi123&#34;&gt;HIHI123&lt;/h2&gt;
+</description>
+        </item>
+        <item>
+        <title>反向代理工具：Nginx Proxy Manager</title>
+        <link>https://d1034181036.github.io/p/nginx-proxy-manager/</link>
+        <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://d1034181036.github.io/p/nginx-proxy-manager/</guid>
+        <description>&lt;img src="https://d1034181036.github.io/p/nginx-proxy-manager/article-img.png" alt="Featured image of post 反向代理工具：Nginx Proxy Manager" /&gt;&lt;blockquote&gt;
+&lt;p&gt;官方網站：https://nginxproxymanager.com/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;為什麼要使用nginx-proxy-manager&#34;&gt;為什麼要使用Nginx Proxy Manager？&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;多人管理系統、圖形化介面&lt;/li&gt;
+&lt;li&gt;漂亮的介面、一目了然所有的Proxy設定&lt;/li&gt;
+&lt;li&gt;內建Let&amp;rsquo;s Encrypt，免費又快速的幫你加上HTTPS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安裝方法使用docker-compose&#34;&gt;安裝方法：使用Docker-Compose&lt;/h2&gt;
+&lt;h3 id=&#34;step1-安裝-dockerhttpsdocsdockercominstall&#34;&gt;Step1: 安裝 &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/install/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;step2-安裝-docker-composehttpsdocsdockercomcomposeinstall-optional&#34;&gt;Step2: 安裝 &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/compose/install/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker-Compose&lt;/a&gt; [Optional]&lt;/h3&gt;
+&lt;h3 id=&#34;step3-建立-docker-composeyml&#34;&gt;Step3: 建立 &lt;code&gt;docker-compose.yml&lt;/code&gt;&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;version: &amp;#39;3&amp;#39;
+services:
+  app:
+    image: &amp;#39;jc21/nginx-proxy-manager:latest&amp;#39;
+    restart: unless-stopped
+    ports:
+      - &amp;#39;80:80&amp;#39;
+      - &amp;#39;81:81&amp;#39;
+      - &amp;#39;443:443&amp;#39;
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;step4-啟動服務-docker-compose-up--d&#34;&gt;Step4: 啟動服務 &lt;code&gt;docker-compose up -d&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;step5-開始使用---http12700181&#34;&gt;Step5: 開始使用 - http://127.0.0.1:81&lt;/h3&gt;
+&lt;p&gt;若是使用SSH安裝，可以依照不同情況遠端連到&lt;code&gt;127.0.0.1:81&lt;/code&gt;。
+以下幾種連接方式提供做為參考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SSH Tunnel&lt;/li&gt;
+&lt;li&gt;公開實體IP / NAT轉址&lt;/li&gt;
+&lt;li&gt;區網虛擬IP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;預設管理員帳密&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Email: admin@example.com
+Password: changeme
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;新增proxy示範&#34;&gt;新增Proxy示範&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/ge9Rxla.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/ge9Rxla.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;proxy列表&#34;&gt;Proxy列表&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/R2bo46x.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/R2bo46x.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Line生日提醒工具</title>
         <link>https://d1034181036.github.io/p/line-birthdy-notify/</link>
         <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
@@ -59,8 +142,8 @@
 &lt;h3 id=&#34;程式碼&#34;&gt;程式碼&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-javascript=&#34; data-lang=&#34;javascript=&#34;&gt;function main(){
   //sheetId可以從網址複製 -&amp;gt;https://docs.google.com/spreadsheets/d/{sheet_id}/
-  const sheetId = &#39;&#39;;
-  const token = &#39;&#39;;
+  const sheetId = &amp;#39;&amp;#39;;
+  const token = &amp;#39;&amp;#39;;
   const notifyDays = 7;
 
   const spreadSheet = SpreadsheetApp.openById(sheetId);
@@ -68,7 +151,7 @@
   const data = sheet.getRange(2,1,sheet.getLastRow()-1,3).getValues();
 
   const now = new Date();
-  let message = &#39;&#39;;
+  let message = &amp;#39;&amp;#39;;
   data.forEach(item =&amp;gt; {
     let birthday = new Date();
     birthday.setMonth(item[0]-1);
@@ -81,23 +164,23 @@
     check_date.setDate(now.getDate() + notifyDays);
 
     if(check_date &amp;gt;= birthday){
-      message += &#39;\n&#39; + item[0] + &#39;/&#39; + item[1] + &#39; - &#39; + item[2];
+      message += &amp;#39;\n&amp;#39; + item[0] + &amp;#39;/&amp;#39; + item[1] + &amp;#39; - &amp;#39; + item[2];
     }
   });
   
-  if(message !== &#39;&#39;){
+  if(message !== &amp;#39;&amp;#39;){
     doPost(token, message);
   }
 }
 
 function doPost(token, message) {
-  UrlFetchApp.fetch(&#39;https://notify-api.line.me/api/notify&#39;, {
-    &#39;headers&#39;: {
-      &#39;Authorization&#39;: &#39;Bearer &#39; + token,
+  UrlFetchApp.fetch(&amp;#39;https://notify-api.line.me/api/notify&amp;#39;, {
+    &amp;#39;headers&amp;#39;: {
+      &amp;#39;Authorization&amp;#39;: &amp;#39;Bearer &amp;#39; + token,
     },
-    &#39;method&#39;: &#39;post&#39;,
-    &#39;payload&#39;: {
-      &#39;message&#39;: message
+    &amp;#39;method&amp;#39;: &amp;#39;post&amp;#39;,
+    &amp;#39;payload&amp;#39;: {
+      &amp;#39;message&amp;#39;: message
     }
   });
 }
@@ -120,80 +203,6 @@ function doPost(token, message) {
 	&gt;
 	&lt;a href=&#34;https://i.imgur.com/6GK6DJK.png&#34; &gt;
 		&lt;img src=&#34;https://i.imgur.com/6GK6DJK.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>反向代理工具：Nginx Proxy Manager</title>
-        <link>https://d1034181036.github.io/p/nginx-proxy-manager/</link>
-        <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
-        
-        <guid>https://d1034181036.github.io/p/nginx-proxy-manager/</guid>
-        <description>&lt;img src="https://d1034181036.github.io/p/nginx-proxy-manager/article-img.png" alt="Featured image of post 反向代理工具：Nginx Proxy Manager" /&gt;&lt;blockquote&gt;
-&lt;p&gt;官方網站：https://nginxproxymanager.com/&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;為什麼要使用nginx-proxy-manager&#34;&gt;為什麼要使用Nginx Proxy Manager？&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;多人管理系統、圖形化介面&lt;/li&gt;
-&lt;li&gt;漂亮的介面、一目了然所有的Proxy設定&lt;/li&gt;
-&lt;li&gt;內建Let&amp;rsquo;s Encrypt，免費又快速的幫你加上HTTPS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;安裝方法使用docker-compose&#34;&gt;安裝方法：使用Docker-Compose&lt;/h2&gt;
-&lt;h3 id=&#34;step1-安裝-dockerhttpsdocsdockercominstall&#34;&gt;Step1: 安裝 &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/install/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Docker&lt;/a&gt;&lt;/h3&gt;
-&lt;h3 id=&#34;step2-安裝-docker-composehttpsdocsdockercomcomposeinstall-optional&#34;&gt;Step2: 安裝 &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/compose/install/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Docker-Compose&lt;/a&gt; [Optional]&lt;/h3&gt;
-&lt;h3 id=&#34;step3-建立-docker-composeyml&#34;&gt;Step3: 建立 &lt;code&gt;docker-compose.yml&lt;/code&gt;&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;version: &#39;3&#39;
-services:
-  app:
-    image: &#39;jc21/nginx-proxy-manager:latest&#39;
-    restart: unless-stopped
-    ports:
-      - &#39;80:80&#39;
-      - &#39;81:81&#39;
-      - &#39;443:443&#39;
-    volumes:
-      - ./data:/data
-      - ./letsencrypt:/etc/letsencrypt
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;step4-啟動服務-docker-compose-up--d&#34;&gt;Step4: 啟動服務 &lt;code&gt;docker-compose up -d&lt;/code&gt;&lt;/h3&gt;
-&lt;h3 id=&#34;step5-開始使用---http12700181&#34;&gt;Step5: 開始使用 - http://127.0.0.1:81&lt;/h3&gt;
-&lt;p&gt;若是使用SSH安裝，可以依照不同情況遠端連到&lt;code&gt;127.0.0.1:81&lt;/code&gt;。
-以下幾種連接方式提供做為參考：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;SSH Tunnel&lt;/li&gt;
-&lt;li&gt;公開實體IP / NAT轉址&lt;/li&gt;
-&lt;li&gt;區網虛擬IP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;預設管理員帳密&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Email: admin@example.com
-Password: changeme
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;h2 id=&#34;新增proxy示範&#34;&gt;新增Proxy示範&lt;/h2&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://i.imgur.com/ge9Rxla.png&#34; &gt;
-		&lt;img src=&#34;https://i.imgur.com/ge9Rxla.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&#34;proxy列表&#34;&gt;Proxy列表&lt;/h2&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://i.imgur.com/R2bo46x.png&#34; &gt;
-		&lt;img src=&#34;https://i.imgur.com/R2bo46x.png&#34;
 			
 			
 			
@@ -246,15 +255,15 @@ Password: changeme
 &lt;/ol&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-javascript=&#34; data-lang=&#34;javascript=&#34;&gt;function basic(){
   // 影片ID設定
-  const videoId = &amp;quot;aST49yvU3x0&amp;quot;;
+  const videoId = &amp;#34;aST49yvU3x0&amp;#34;;
   // 標題格式設定
-  const titleFormat = &amp;quot;有 {views} 個人點進來看我把筆放到貓的左手上&amp;quot;;
+  const titleFormat = &amp;#34;有 {views} 個人點進來看我把筆放到貓的左手上&amp;#34;;
   // 取得影片資訊
-  const videoDetails = YouTube.Videos.list(&amp;quot;snippet, statistics&amp;quot;, { id: videoId })[&#39;items&#39;][0];
+  const videoDetails = YouTube.Videos.list(&amp;#34;snippet, statistics&amp;#34;, { id: videoId })[&amp;#39;items&amp;#39;][0];
   // 更新標題資訊
-  videoDetails[&#39;snippet&#39;][&#39;title&#39;] = titleFormat.replace(&amp;quot;{views}&amp;quot;, videoDetails[&#39;statistics&#39;][&#39;viewCount&#39;].toLocaleString(&#39;en-US&#39;));
+  videoDetails[&amp;#39;snippet&amp;#39;][&amp;#39;title&amp;#39;] = titleFormat.replace(&amp;#34;{views}&amp;#34;, videoDetails[&amp;#39;statistics&amp;#39;][&amp;#39;viewCount&amp;#39;].toLocaleString(&amp;#39;en-US&amp;#39;));
   // 執行更新
-  YouTube.Videos.update(videoDetails, &amp;quot;id,snippet,statistics&amp;quot;);
+  YouTube.Videos.update(videoDetails, &amp;#34;id,snippet,statistics&amp;#34;);
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;版本2---進階功能版&#34;&gt;版本2 - 進階功能版&lt;/h2&gt;
 &lt;h3 id=&#34;多增加三點功能&#34;&gt;多增加三點功能&lt;/h3&gt;
@@ -265,24 +274,24 @@ Password: changeme
 &lt;/ol&gt;
 &lt;h3 id=&#34;主程式&#34;&gt;主程式&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-javascript=&#34; data-lang=&#34;javascript=&#34;&gt;function main(){
-  const videoId = &amp;quot;aST49yvU3x0&amp;quot;;
-  const titleFormat = &amp;quot;有 {views} 個人點進來看我把筆放到貓的左手上&amp;quot;;
-  const sheetId = &amp;quot;{sheet_id}&amp;quot;;
+  const videoId = &amp;#34;aST49yvU3x0&amp;#34;;
+  const titleFormat = &amp;#34;有 {views} 個人點進來看我把筆放到貓的左手上&amp;#34;;
+  const sheetId = &amp;#34;{sheet_id}&amp;#34;;
 
-  const response = YouTube.Videos.list(&amp;quot;snippet, statistics&amp;quot;, { id: videoId });
-  const videoDetails = response[&#39;items&#39;][0];
+  const response = YouTube.Videos.list(&amp;#34;snippet, statistics&amp;#34;, { id: videoId });
+  const videoDetails = response[&amp;#39;items&amp;#39;][0];
 
-  const currentTitle = videoDetails[&#39;snippet&#39;][&#39;title&#39;];
-  const currentViews = videoDetails[&#39;statistics&#39;][&#39;viewCount&#39;];
-  const newTitle = titleFormat.replace(&amp;quot;{views}&amp;quot;, currentViews.toLocaleString(&#39;en-US&#39;));
+  const currentTitle = videoDetails[&amp;#39;snippet&amp;#39;][&amp;#39;title&amp;#39;];
+  const currentViews = videoDetails[&amp;#39;statistics&amp;#39;][&amp;#39;viewCount&amp;#39;];
+  const newTitle = titleFormat.replace(&amp;#34;{views}&amp;#34;, currentViews.toLocaleString(&amp;#39;en-US&amp;#39;));
 
   if(currentTitle !== newTitle){
-    videoDetails[&#39;snippet&#39;][&#39;title&#39;] = newTitle;
-    YouTube.Videos.update(videoDetails, &amp;quot;id,snippet,statistics&amp;quot;);
+    videoDetails[&amp;#39;snippet&amp;#39;][&amp;#39;title&amp;#39;] = newTitle;
+    YouTube.Videos.update(videoDetails, &amp;#34;id,snippet,statistics&amp;#34;);
     Logger.log(`Update completed: ${newTitle}`);
     sheetLog(sheetId, currentViews);
   }else{
-    Logger.log(&amp;quot;No need to update&amp;quot;);
+    Logger.log(&amp;#34;No need to update&amp;#34;);
   }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;記錄google-sheets&#34;&gt;記錄Google Sheets&lt;/h3&gt;
@@ -293,7 +302,7 @@ Password: changeme
   const lastRow = sheet.getLastRow();
   const currentDate = new Date();
 
-  sheet.getRange(lastRow+1, 1).setValue(currentDate.toLocaleString(&#39;zh-tw&#39;, { timeZone: &#39;Asia/Taipei&#39; }));
+  sheet.getRange(lastRow+1, 1).setValue(currentDate.toLocaleString(&amp;#39;zh-tw&amp;#39;, { timeZone: &amp;#39;Asia/Taipei&amp;#39; }));
   sheet.getRange(lastRow+1, 2).setValue(views);
   sheet.getRange(lastRow+1, 3).setValue(currentDate.getTime());
 }
